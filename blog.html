@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog Libre Permis : conseils permis, code de la route et actualités. Retrouvez nos articles pour bien préparer votre examen.">
+  <title>Blog — Conseils et actualités permis | Libre Permis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/blog.css">
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu</a>
+  <!-- ========== NAVBAR ========== -->
+  <header class="header" role="banner">
+    <div class="header__inner">
+      <a href="index.html" class="header__logo" aria-label="Libre Permis — Accueil">
+        <span class="header__logo-text">Libre Permis</span>
+      </a>
+      <button type="button" class="header__burger" aria-expanded="false" aria-controls="nav-main" aria-label="Ouvrir le menu">
+        <span class="header__burger-bar"></span>
+        <span class="header__burger-bar"></span>
+        <span class="header__burger-bar"></span>
+      </button>
+      <nav id="nav-main" class="nav" aria-label="Navigation principale">
+        <ul class="nav__list">
+          <li><a href="index.html" class="nav__link">Accueil</a></li>
+          <li><a href="permis-b.html" class="nav__link">Permis B</a></li>
+          <li><a href="permis-accelere.html" class="nav__link">Accéléré</a></li>
+          <li><a href="code-route.html" class="nav__link">Code</a></li>
+          <li><a href="financements.html" class="nav__link">Financements</a></li>
+          <li><a href="points-rdv.html" class="nav__link">Points RDV</a></li>
+          <li><a href="blog.html" class="nav__link nav__link--current">Blog</a></li>
+          <li><a href="contact.html" class="nav__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" role="main">
+    <!-- ========== HERO ========== -->
+    <section class="hero hero--blog" aria-labelledby="hero-title">
+      <div class="container">
+        <h1 id="hero-title" class="hero__title">Blog</h1>
+        <p class="hero__lead">Conseils, actualités et astuces pour préparer le code et le permis en toute sérénité.</p>
+      </div>
+    </section>
+
+    <!-- ========== LISTE DES ARTICLES ========== -->
+    <section class="blog-listing" aria-labelledby="articles-title">
+      <div class="container">
+        <h2 id="articles-title" class="section-title visually-hidden">Articles</h2>
+
+        <ul class="blog-list">
+          <!-- Article 1 -->
+          <li class="article-card">
+            <a href="blog/conduite-hiver-conseils.html" class="article-card__link">
+              <span class="article-card__meta">
+                <span class="article-card__category">Conseils</span>
+                <time class="article-card__date" datetime="2025-01-15">15 janvier 2025</time>
+              </span>
+              <h3 class="article-card__title">Conduire en hiver : les bons réflexes</h3>
+              <p class="article-card__excerpt">Quelques rappels essentiels pour aborder la conduite par temps froid et sur chaussée glissante en toute sécurité.</p>
+              <span class="article-card__read">Lire l’article</span>
+            </a>
+          </li>
+
+          <!-- Article 2 -->
+          <li class="article-card">
+            <a href="blog/code-examen-comment-se-preparer.html" class="article-card__link">
+              <span class="article-card__meta">
+                <span class="article-card__category">Code</span>
+                <time class="article-card__date" datetime="2025-01-08">8 janvier 2025</time>
+              </span>
+              <h3 class="article-card__title">Examen du code : comment bien se préparer</h3>
+              <p class="article-card__excerpt">Organisation, révision des thèmes et gestion du stress : nos conseils pour arriver serein le jour J.</p>
+              <span class="article-card__read">Lire l’article</span>
+            </a>
+          </li>
+
+          <!-- Article 3 -->
+          <li class="article-card">
+            <a href="blog/permis-accelere-avantages-inconvenients.html" class="article-card__link">
+              <span class="article-card__meta">
+                <span class="article-card__category">Permis</span>
+                <time class="article-card__date" datetime="2024-12-20">20 décembre 2024</time>
+              </span>
+              <h3 class="article-card__title">Permis accéléré : pour qui, pour quoi ?</h3>
+              <p class="article-card__excerpt">Avantages et inconvénients du stage intensif. À qui s’adresse-t-il et comment bien le choisir ?</p>
+              <span class="article-card__read">Lire l’article</span>
+            </a>
+          </li>
+
+          <!-- Article 4 -->
+          <li class="article-card">
+            <a href="blog/financer-permis-cpf-aides.html" class="article-card__link">
+              <span class="article-card__meta">
+                <span class="article-card__category">Financement</span>
+                <time class="article-card__date" datetime="2024-12-05">5 décembre 2024</time>
+              </span>
+              <h3 class="article-card__title">Financer son permis : CPF et autres aides</h3>
+              <p class="article-card__excerpt">Tour d’horizon des dispositifs pour alléger le coût de la formation au permis de conduire.</p>
+              <span class="article-card__read">Lire l’article</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Zone prête pour pagination future -->
+        <nav class="blog-pagination" aria-label="Pagination des articles">
+          <p class="blog-pagination__info">Page 1 — d’autres articles à venir.</p>
+        </nav>
+      </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta-final" aria-labelledby="cta-blog-title">
+      <div class="container">
+        <h2 id="cta-blog-title" class="cta-final__title">Une question sur nos formations ?</h2>
+        <p class="cta-final__lead">Consultez nos pages Permis B, Code ou Contact pour en savoir plus.</p>
+        <a href="contact.html" class="btn btn--secondary">Nous contacter</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__inner">
+        <p class="footer__brand">Libre Permis</p>
+        <nav class="footer__nav" aria-label="Navigation pied de page">
+          <ul class="footer__list">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="permis-b.html">Permis B</a></li>
+            <li><a href="permis-accelere.html">Accéléré</a></li>
+            <li><a href="code-route.html">Code</a></li>
+            <li><a href="financements.html">Financements</a></li>
+            <li><a href="points-rdv.html">Points RDV</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <p class="footer__legal">© Libre Permis. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

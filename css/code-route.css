@@ -1,0 +1,140 @@
+/**
+ * Libre Permis — Styles spécifiques page Code de la route
+ * Présentation pédagogique + offres accès 3/6 mois
+ */
+
+/* ----- Présentation (pédagogie) ----- */
+.code-presentation {
+  padding: var(--space-8) 0;
+}
+
+.code-presentation__content {
+  display: grid;
+  gap: var(--space-6);
+  margin-top: var(--space-4);
+}
+
+@media (min-width: 48rem) {
+  .code-presentation__content {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+}
+
+.code-presentation__block {
+  background-color: var(--color-white);
+  padding: var(--space-4);
+  border-radius: var(--card-radius);
+  border: var(--card-border);
+  box-shadow: var(--card-shadow);
+}
+
+.code-presentation__subtitle {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  margin: 0 0 var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 2px solid var(--color-blue);
+}
+
+.code-presentation__list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--color-gray-900);
+  line-height: 1.6;
+}
+
+.code-presentation__list li {
+  margin-bottom: var(--space-2);
+}
+
+.code-presentation__list li:last-child {
+  margin-bottom: 0;
+}
+
+.code-presentation__list--check {
+  list-style: none;
+  padding-left: 0;
+}
+
+.code-presentation__list--check li {
+  padding-left: 1.75rem;
+  position: relative;
+}
+
+.code-presentation__list--check li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-green);
+  font-weight: var(--font-weight-bold);
+}
+
+/* ----- Offres (accès 3 mois / 6 mois) ----- */
+.code-offres {
+  padding: var(--space-8) 0;
+}
+
+.code-offres__grid {
+  display: grid;
+  gap: var(--space-4);
+  list-style: none;
+  margin: 0 0 var(--space-4);
+  padding: 0;
+}
+
+@media (min-width: 48rem) {
+  .code-offres__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-5);
+  }
+}
+
+.code-offre {
+  background-color: var(--color-white);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.code-offre:hover {
+  border-color: var(--color-blue);
+  box-shadow: 0 4px 12px rgba(13, 71, 161, 0.12);
+}
+
+.code-offre__header {
+  flex-grow: 1;
+  margin-bottom: var(--space-4);
+}
+
+.code-offre__title {
+  font-size: var(--font-size-h3);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  margin: 0 0 var(--space-2);
+}
+
+.code-offre__desc {
+  font-size: var(--font-size-base);
+  color: var(--color-gray-500);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.code-offre__cta {
+  width: 100%;
+  margin-top: auto;
+  text-align: center;
+}
+
+.code-offres__note {
+  font-size: 0.875rem;
+  color: var(--color-gray-500);
+  margin: 0;
+  max-width: 42ch;
+}

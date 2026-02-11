@@ -1,0 +1,106 @@
+/**
+ * Libre Permis — Styles spécifiques page Permis B
+ * Cartes de prix comparables, cohérentes avec le design existant
+ */
+
+/* ----- Bloc formule (BEA, B, AAC, Passerelle) ----- */
+.formule-section {
+  padding: var(--space-8) 0;
+}
+
+.formule-section__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  margin: 0 0 var(--space-2);
+  line-height: var(--line-height-tight);
+}
+
+.formule-section__lead {
+  font-size: var(--font-size-lead);
+  color: var(--color-gray-500);
+  margin: 0 0 var(--space-5);
+  max-width: 50ch;
+}
+
+/* ----- Grille de cartes prix ----- */
+.price-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  gap: var(--space-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.price-cards--single {
+  max-width: 20rem;
+}
+
+/* ----- Carte prix (alignée sur .card existant) ----- */
+.price-card {
+  background-color: var(--color-white);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  padding: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-height: 11rem;
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.price-card:hover {
+  border-color: var(--color-blue);
+  box-shadow: 0 4px 12px rgba(13, 71, 161, 0.12);
+}
+
+.section--alt .price-card {
+  background-color: var(--color-white);
+}
+
+.price-card__label {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  margin-bottom: var(--space-2);
+}
+
+.price-card__price {
+  font-size: 1.75rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-blue);
+  margin-bottom: var(--space-4);
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+
+.price-card__cta {
+  width: 100%;
+  margin-top: auto;
+}
+
+@media (min-width: 48rem) {
+  .price-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .price-cards--single {
+    max-width: 20rem;
+    grid-template-columns: 1fr;
+  }
+
+  .price-card__price {
+    font-size: 2rem;
+  }
+}
+
+/* BEA a 4 cartes, B a 3 : sur tablette on peut garder 2 ou 3 colonnes */
+@media (min-width: 48rem) and (max-width: 63.9375rem) {
+  .price-cards:not(.price-cards--single) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

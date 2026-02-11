@@ -1,0 +1,66 @@
+/**
+ * Libre Permis — Variables (charte graphique)
+ * Fond blanc, bleu + vert, moderne et rassurant
+ */
+
+:root {
+  /* ----- Couleurs principales ----- */
+  --color-blue: #0D47A1;
+  --color-blue-dark: #0A3D7A;
+  --color-blue-light: #E3F2FD;
+  --color-green: #2E7D32;
+  --color-green-dark: #1B5E20;
+  --color-green-light: #E8F5E9;
+
+  /* ----- Neutres ----- */
+  --color-white: #FFFFFF;
+  --color-gray-100: #F5F5F5;
+  --color-gray-200: #EEEEEE;
+  --color-gray-500: #757575;
+  --color-gray-900: #212121;
+
+  /* ----- États ----- */
+  --color-success: #2E7D32;
+  --color-error: #C62828;
+  --color-warning: #F9A825;
+
+  /* ----- Typographie ----- */
+  --font-family: "DM Sans", system-ui, -apple-system, sans-serif;
+  --font-size-base: 1rem;      /* 16px */
+  --font-size-lead: 1.125rem;  /* 18px */
+  --font-size-h3: 1.25rem;     /* 20px */
+  --font-size-h2: 1.5rem;      /* 24px */
+  --font-size-h1: 2rem;        /* 32px mobile */
+  --font-size-display: 2.25rem;/* 36px desktop hero */
+  --line-height-tight: 1.25;
+  --line-height-body: 1.5;
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* ----- Boutons ----- */
+  --btn-radius: 10px;
+  --btn-padding-y: 0.875rem;
+  --btn-padding-x: 1.5rem;
+  --btn-border-width: 2px;
+
+  /* ----- Cartes ----- */
+  --card-radius: 14px;
+  --card-border: 1px solid var(--color-gray-200);
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+
+  /* ----- Espacement (grille 8px) ----- */
+  --space-1: 0.5rem;   /* 8px */
+  --space-2: 1rem;     /* 16px */
+  --space-3: 1.5rem;   /* 24px */
+  --space-4: 2rem;     /* 32px */
+  --space-5: 2.5rem;   /* 40px */
+  --space-6: 3rem;     /* 48px */
+  --space-8: 4rem;     /* 64px */
+  --space-10: 5rem;    /* 80px */
+
+  /* ----- Layout ----- */
+  --container-max: 72rem;
+  --container-padding: var(--space-3);
+}
