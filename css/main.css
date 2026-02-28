@@ -340,7 +340,8 @@ ul {
   position: absolute;
   top: 100%;
   left: 0;
-  min-width: 12rem;
+  min-width: max-content;
+  width: max-content;
   background: var(--color-white);
   border: var(--card-border);
   border-radius: var(--card-radius);
@@ -377,6 +378,7 @@ ul {
   color: var(--color-gray-900);
   font-weight: var(--font-weight-medium);
   border-radius: var(--btn-radius);
+  white-space: nowrap;
 }
 
 .nav__dropdown a:hover {
