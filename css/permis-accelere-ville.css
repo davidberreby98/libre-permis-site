@@ -1,10 +1,11 @@
 /**
- * Libre Permis — Page Permis accéléré Paris (75)
- * Design amélioré : hero, avantages, formules, CTA
+ * Libre Permis — Pages Permis accéléré (toutes destinations)
+ * Design : hero, avantages, formules, CTA
  */
 
-/* ----- Hero Paris : fond dégradé bleu/vert ----- */
-.hero--paris {
+/* ----- Hero : fond dégradé bleu/vert ----- */
+.hero--paris,
+.hero--accelere {
   position: relative;
   min-height: 55vh;
   display: flex;
@@ -13,14 +14,16 @@
   overflow: hidden;
 }
 
-.hero__paris-bg {
+.hero__paris-bg,
+.hero__accelere-bg {
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, #0D47A1 0%, #1565C0 35%, #2E7D32 100%);
   z-index: 0;
 }
 
-.hero__paris-bg::after {
+.hero__paris-bg::after,
+.hero__accelere-bg::after {
   content: "";
   position: absolute;
   inset: 0;
@@ -28,7 +31,8 @@
   pointer-events: none;
 }
 
-.hero--paris .hero__content {
+.hero--paris .hero__content,
+.hero--accelere .hero__content {
   position: relative;
   z-index: 2;
   text-align: center;
@@ -67,7 +71,8 @@
 }
 
 @media (min-width: 48rem) {
- .hero--paris {
+  .hero--paris,
+  .hero--accelere {
     min-height: 50vh;
   }
 
@@ -76,12 +81,14 @@
   }
 }
 
-/* ----- Avantages Paris ----- */
-.paris-avantages {
+/* ----- Avantages ----- */
+.paris-avantages,
+.accelere-avantages {
   padding: var(--space-8) 0;
 }
 
-.paris-avantages__title {
+.paris-avantages__title,
+.accelere-avantages__title {
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-semibold);
   color: var(--color-gray-900);
@@ -91,7 +98,8 @@
   margin-inline: auto;
 }
 
-.paris-avantages__grid {
+.paris-avantages__grid,
+.accelere-avantages__grid {
   display: grid;
   gap: var(--space-4);
   list-style: none;
@@ -100,18 +108,21 @@
 }
 
 @media (min-width: 48rem) {
-  .paris-avantages__grid {
+  .paris-avantages__grid,
+  .accelere-avantages__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 64rem) {
-  .paris-avantages__grid {
+  .paris-avantages__grid,
+  .accelere-avantages__grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-.paris-avantage {
+.paris-avantage,
+.accelere-avantage {
   background: var(--color-white);
   padding: var(--space-4);
   border-radius: var(--card-radius);
@@ -120,12 +131,14 @@
   transition: box-shadow 0.2s, border-color 0.2s;
 }
 
-.paris-avantage:hover {
+.paris-avantage:hover,
+.accelere-avantage:hover {
   border-color: var(--color-blue-light);
   box-shadow: 0 4px 16px rgba(13, 71, 161, 0.08);
 }
 
-.paris-avantage__icon {
+.paris-avantage__icon,
+.accelere-avantage__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -137,18 +150,21 @@
   margin-bottom: var(--space-3);
 }
 
-.paris-avantage__icon svg {
+.paris-avantage__icon svg,
+.accelere-avantage__icon svg {
   flex-shrink: 0;
 }
 
-.paris-avantage__title {
+.paris-avantage__title,
+.accelere-avantage__title {
   font-size: 1.0625rem;
   font-weight: var(--font-weight-semibold);
   color: var(--color-gray-900);
   margin: 0 0 var(--space-1);
 }
 
-.paris-avantage__text {
+.paris-avantage__text,
+.accelere-avantage__text {
   font-size: 0.9375rem;
   color: var(--color-gray-500);
   margin: 0;
@@ -156,24 +172,24 @@
 }
 
 /* ----- Formules : centrées ----- */
-.page--permis-paris .formule-section .container {
+.page--permis-accelere .formule-section .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.page--permis-paris .formule-section__header {
+.page--permis-accelere .formule-section__header {
   margin-bottom: var(--space-3);
 }
 
-.page--permis-paris .formule-section__lead {
+.page--permis-accelere .formule-section__lead {
   margin-inline: auto;
   margin-bottom: var(--space-6);
   max-width: 48ch;
 }
 
-.page--permis-paris .price-cards {
+.page--permis-accelere .price-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -181,13 +197,13 @@
   margin-bottom: var(--space-5);
 }
 
-.page--permis-paris .price-card {
+.page--permis-accelere .price-card {
   width: 18rem;
   aspect-ratio: 2 / 1;
   min-height: unset;
 }
 
-.page--permis-paris .formule-section .btn {
+.page--permis-accelere .formule-section .btn {
   margin-top: 0;
 }
 
@@ -238,8 +254,9 @@
   color: var(--color-green);
 }
 
-/* ----- CTA final Paris ----- */
-.cta-final--paris {
+/* ----- CTA final ----- */
+.cta-final--paris,
+.cta-final--accelere {
   background: linear-gradient(135deg, #0A3D7A 0%, #0D47A1 50%, #1565C0 100%);
 }
 
