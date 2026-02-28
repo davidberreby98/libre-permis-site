@@ -1,0 +1,248 @@
+/**
+ * Libre Permis — Page Permis accéléré Paris (75)
+ * Design amélioré : hero, avantages, formules, CTA
+ */
+
+/* ----- Hero Paris : fond dégradé bleu/vert ----- */
+.hero--paris {
+  position: relative;
+  min-height: 55vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero__paris-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0D47A1 0%, #1565C0 35%, #2E7D32 100%);
+  z-index: 0;
+}
+
+.hero__paris-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero--paris .hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: var(--space-8) var(--container-padding);
+}
+
+.hero__content--center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero__badge {
+  display: inline-block;
+  padding: 0.35rem 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--color-white);
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 2rem;
+  margin-bottom: var(--space-3);
+  backdrop-filter: blur(4px);
+}
+
+.hero__title--dark {
+  color: var(--color-white);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero__lead--dark {
+  color: rgba(255, 255, 255, 0.92);
+  max-width: 42ch;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 48rem) {
+ .hero--paris {
+    min-height: 50vh;
+  }
+
+  .hero__title--dark {
+    font-size: var(--font-size-display);
+  }
+}
+
+/* ----- Avantages Paris ----- */
+.paris-avantages {
+  padding: var(--space-8) 0;
+}
+
+.paris-avantages__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  text-align: center;
+  margin: 0 0 var(--space-6);
+  max-width: 36ch;
+  margin-inline: auto;
+}
+
+.paris-avantages__grid {
+  display: grid;
+  gap: var(--space-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 48rem) {
+  .paris-avantages__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64rem) {
+  .paris-avantages__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.paris-avantage {
+  background: var(--color-white);
+  padding: var(--space-4);
+  border-radius: var(--card-radius);
+  border: var(--card-border);
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.paris-avantage:hover {
+  border-color: var(--color-blue-light);
+  box-shadow: 0 4px 16px rgba(13, 71, 161, 0.08);
+}
+
+.paris-avantage__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: var(--color-blue-light);
+  color: var(--color-blue);
+  border-radius: 12px;
+  margin-bottom: var(--space-3);
+}
+
+.paris-avantage__icon svg {
+  flex-shrink: 0;
+}
+
+.paris-avantage__title {
+  font-size: 1.0625rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  margin: 0 0 var(--space-1);
+}
+
+.paris-avantage__text {
+  font-size: 0.9375rem;
+  color: var(--color-gray-500);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ----- Formules : centrées ----- */
+.page--permis-paris .formule-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.page--permis-paris .formule-section__header {
+  margin-bottom: var(--space-3);
+}
+
+.page--permis-paris .formule-section__lead {
+  margin-inline: auto;
+  margin-bottom: var(--space-6);
+  max-width: 48ch;
+}
+
+.page--permis-paris .price-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.page--permis-paris .price-card {
+  width: 18rem;
+  aspect-ratio: 2 / 1;
+  min-height: unset;
+}
+
+.page--permis-paris .formule-section .btn {
+  margin-top: 0;
+}
+
+/* ----- Formules : en-tête avec icône ----- */
+.formule-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.formule-section__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background: var(--color-blue-light);
+  color: var(--color-blue);
+  border-radius: 12px;
+  flex-shrink: 0;
+}
+
+.formule-section__icon--green {
+  background: var(--color-green-light);
+  color: var(--color-green);
+}
+
+.formule-section__icon svg {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/* ----- Cartes prix : info supplémentaire ----- */
+.price-card__info {
+  font-size: 0.8125rem;
+  color: var(--color-gray-500);
+  margin-top: auto;
+}
+
+/* ----- Section auto : touche de couleur ----- */
+.permis-section--auto .formule-section__title {
+  color: var(--color-blue);
+}
+
+.permis-section--manuelle .formule-section__title {
+  color: var(--color-green);
+}
+
+/* ----- CTA final Paris ----- */
+.cta-final--paris {
+  background: linear-gradient(135deg, #0A3D7A 0%, #0D47A1 50%, #1565C0 100%);
+}
+
+.cta-final__btn {
+  min-width: 12rem;
+}
