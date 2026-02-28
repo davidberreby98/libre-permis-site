@@ -1,0 +1,49 @@
+/**
+ * Libre Permis — Styles spécifiques page Accueil
+ * Navbar optimisée (preview, à répliquer sur les autres pages si validé)
+ */
+
+/* ----- Navbar : hauteur 4rem, logo 12rem avec overflow caché ----- */
+.page--accueil .header__inner {
+  height: 4rem;
+  min-height: 4rem;
+  max-height: 4rem;
+  padding: 0 var(--container-padding);
+}
+
+.page--accueil .header__logo {
+  height: 4rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.page--accueil .header__logo-img {
+  height: 12rem;
+  width: auto;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* ----- Logo décalé vers la gauche ----- */
+.page--accueil .header__logo {
+  margin-left: calc(-1 * var(--space-1));
+}
+
+/* ----- Espacement des éléments de la nav ----- */
+@media (min-width: 64rem) {
+  .page--accueil .nav__list {
+    gap: var(--space-2);
+  }
+
+  .page--accueil .header__inner {
+    gap: var(--space-5);
+  }
+}
+
+/* ----- Menu mobile : top ajusté à la hauteur navbar (4rem) ----- */
+@media (max-width: 63.9375rem) {
+  .page--accueil .nav {
+    top: 4rem;
+  }
+}
