@@ -35,16 +35,61 @@
   burger.addEventListener("click", toggleMenu);
 
   // Fermer le menu au clic sur un lien (navigation effective)
-  nav.querySelectorAll(".nav__link").forEach(function (link) {
+  nav.querySelectorAll(".nav__link, .nav__dropdown a").forEach(function (link) {
     link.addEventListener("click", function () {
+      if (this.parentElement && this.parentElement.classList.contains("nav__item--dropdown") && window.innerWidth < 1024) {
+        return;
+      }
       closeMenu();
     });
   });
 
-  // Fermer au focus en dehors (optionnel, évite menu coincé)
+  function updateNavDropdownState() {
+    var hasOpen = nav.querySelector(".nav__item--dropdown.is-open-desktop");
+    nav.classList.toggle("nav--has-open-dropdown", !!hasOpen);
+  }
+
+  // Dropdown : toggle sur mobile (tous les dropdowns)
+  nav.querySelectorAll(".nav__item--dropdown > .nav__link").forEach(function (dropdownToggle) {
+    dropdownToggle.addEventListener("click", function (e) {
+      if (window.innerWidth < 1024) {
+        e.preventDefault();
+        var parent = this.closest(".nav__item--dropdown");
+        parent.classList.toggle("is-open");
+      } else {
+        e.preventDefault();
+        var parent = this.closest(".nav__item--dropdown");
+        var wasOpen = parent.classList.contains("is-open-desktop");
+        nav.querySelectorAll(".nav__item--dropdown").forEach(function (item) {
+          item.classList.remove("is-open-desktop");
+        });
+        if (!wasOpen) {
+          parent.classList.add("is-open-desktop");
+        }
+        updateNavDropdownState();
+      }
+    });
+  });
+
+  document.addEventListener("click", function (e) {
+    if (window.innerWidth < 1024) return;
+    var openItem = nav.querySelector(".nav__item--dropdown.is-open-desktop");
+    if (openItem && openItem.contains(e.target)) return;
+    nav.querySelectorAll(".nav__item--dropdown").forEach(function (item) {
+      item.classList.remove("is-open-desktop");
+    });
+    updateNavDropdownState();
+  });
+
   document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && nav.classList.contains("is-open")) {
-      closeMenu();
+    if (e.key === "Escape") {
+      if (nav.classList.contains("is-open")) {
+        closeMenu();
+      }
+      nav.querySelectorAll(".nav__item--dropdown").forEach(function (item) {
+        item.classList.remove("is-open-desktop");
+      });
+      updateNavDropdownState();
     }
   });
 })();
