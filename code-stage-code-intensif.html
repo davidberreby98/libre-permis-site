@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/code-route.css">
 </head>
-<body>
+<body class="page--code-stage">
   <a href="#main-content" class="skip-link">Aller au contenu</a>
   <header class="header" role="banner">
     <div class="header__inner">
@@ -82,21 +82,30 @@
 
   <main id="main-content" role="main">
     <section class="hero hero--code" aria-labelledby="hero-title">
-      <div class="container">
+      <div class="hero__code-stage-bg" aria-hidden="true"></div>
+      <div class="container hero__content">
         <h1 id="hero-title" class="hero__title">Stage code intensif</h1>
         <p class="hero__lead">Formation regroupée sur quelques jours pour préparer l'examen du code en conditions réelles.</p>
       </div>
     </section>
 
-    <section class="code-offres" aria-labelledby="section-content">
+    <section class="code-offres section--alt" aria-labelledby="section-content">
       <div class="container">
         <h2 id="section-content" class="section-title">Stage code intensif</h2>
         <p class="section-lead">Stage en présentiel pour une préparation accélérée au code de la route. Idéal pour ceux qui souhaitent obtenir le code rapidement.</p>
-        <a href="contact.html" class="btn btn--primary">En savoir plus</a>
+        <div class="code-content-block">
+          <h3 class="code-content-block__title">Au programme</h3>
+          <ul class="code-content-block__list">
+            <li>Formation regroupée sur 2 à 5 jours selon les sessions</li>
+            <li>Examen blanc en conditions réelles</li>
+            <li>Enseignement en petit groupe pour un suivi personnalisé</li>
+          </ul>
+        </div>
+        <a href="contact.html" class="btn btn--primary">Connaître les prochaines dates</a>
       </div>
     </section>
 
-    <section class="cta-final" aria-labelledby="cta-title">
+    <section class="cta-final cta-final--code" aria-labelledby="cta-title">
       <div class="container">
         <h2 id="cta-title" class="cta-final__title">Intéressé par le stage code ?</h2>
         <p class="cta-final__lead">Contactez-nous pour connaître les prochaines dates.</p>

@@ -1,7 +1,240 @@
 /**
- * Libre Permis — Styles spécifiques page Code de la route
- * Présentation pédagogique + offres accès 3/6 mois
+ * Libre Permis — Styles spécifiques pages Code
+ * Hero, offres 3/6 mois, sous-pages Rousseau, candidat libre, stage intensif
  */
+
+/* ========== HERO CODE (page principale) ========== */
+.hero--code {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero__code-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1565C0 0%, #0D47A1 50%, #1976D2 100%);
+  z-index: 0;
+}
+
+.hero__code-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero--code .hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: var(--space-8) var(--container-padding);
+}
+
+.hero--code .hero__title {
+  color: var(--color-white);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero--code .hero__lead {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Hero variantes : Rousseau (indigo), candidat libre (bleu-vert), stage (violet) */
+.hero__code-rousseau-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #3949AB 0%, #5C6BC0 50%, #7986CB 100%);
+  z-index: 0;
+}
+
+.hero__code-rousseau-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 20% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+.hero__code-candidat-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #00695C 0%, #00897B 50%, #26A69A 100%);
+  z-index: 0;
+}
+
+.hero__code-candidat-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero__code-stage-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #6A1B9A 0%, #7B1FA2 50%, #9C27B0 100%);
+  z-index: 0;
+}
+
+.hero__code-stage-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+/* ========== CENTRAGE ET LAYOUT ========== */
+.page--code .code-offres .container,
+.page--code-rousseau .code-offres .container,
+.page--code-candidat .code-offres .container,
+.page--code-stage .code-offres .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.page--code .section-title,
+.page--code .section-lead,
+.page--code-rousseau .section-title,
+.page--code-rousseau .section-lead,
+.page--code-candidat .section-title,
+.page--code-candidat .section-lead,
+.page--code-stage .section-title,
+.page--code-stage .section-lead {
+  margin-inline: auto;
+}
+
+.page--code .code-offres .btn,
+.page--code-rousseau .code-offres .btn,
+.page--code-candidat .code-offres .btn,
+.page--code-stage .code-offres .btn {
+  margin-top: var(--space-6);
+}
+
+.page--code .code-offres__note {
+  margin-inline: auto;
+  margin-top: var(--space-4);
+}
+
+.page--code .code-offres__grid,
+.page--code .code-nav {
+  width: 100%;
+  max-width: 56rem;
+}
+
+/* ========== LIENS VERS SOUS-PAGES (page principale) ========== */
+.code-nav {
+  display: grid;
+  gap: var(--space-4);
+  list-style: none;
+  margin: var(--space-6) 0 0;
+  padding: 0;
+}
+
+.code-nav li {
+  margin: 0;
+}
+
+@media (min-width: 48rem) {
+  .code-nav {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.code-nav__item {
+  display: block;
+  padding: var(--space-4);
+  background: var(--color-white);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  text-decoration: none;
+  color: inherit;
+  text-align: left;
+  transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+
+.code-nav__item:hover {
+  border-color: var(--color-blue);
+  box-shadow: 0 4px 16px rgba(13, 71, 161, 0.12);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.code-nav__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--color-blue-light);
+  color: var(--color-blue);
+  border-radius: 10px;
+  margin-bottom: var(--space-3);
+}
+
+.code-nav__icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.code-nav__title {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  margin: 0 0 var(--space-1);
+}
+
+.code-nav__desc {
+  font-size: 0.9375rem;
+  color: var(--color-gray-500);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ========== SOUS-PAGES : blocs de contenu ========== */
+.code-content-block {
+  margin-top: var(--space-5);
+  padding: var(--space-5);
+  background: var(--color-gray-100);
+  border-radius: var(--card-radius);
+  text-align: left;
+  width: 100%;
+  max-width: 48rem;
+}
+
+.code-content-block__title {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  margin: 0 0 var(--space-3);
+  padding-bottom: var(--space-2);
+  border-bottom: 2px solid var(--color-blue);
+}
+
+.code-content-block__list {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--color-gray-500);
+  line-height: 1.6;
+}
+
+.code-content-block__list li {
+  margin-bottom: var(--space-2);
+}
+
+/* CTA final code */
+.cta-final--code {
+  background: linear-gradient(135deg, #1565C0 0%, #0D47A1 100%);
+}
 
 /* ----- Présentation (pédagogie) ----- */
 .code-presentation {
@@ -100,11 +333,29 @@
   display: flex;
   flex-direction: column;
   transition: border-color 0.2s, box-shadow 0.2s;
+  border-top: 3px solid var(--color-blue);
 }
 
 .code-offre:hover {
   border-color: var(--color-blue);
   box-shadow: 0 4px 12px rgba(13, 71, 161, 0.12);
+}
+
+.code-offre__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--color-blue-light);
+  color: var(--color-blue);
+  border-radius: 10px;
+  margin-bottom: var(--space-3);
+}
+
+.code-offre__icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
 }
 
 .code-offre__header {
