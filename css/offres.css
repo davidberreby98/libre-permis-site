@@ -401,6 +401,20 @@
   margin-bottom: var(--space-4);
 }
 
+/* Centrage des cartes prix — page Permis B manuelle */
+.page--offres-manuelle .price-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-4);
+  width: 100%;
+}
+
+.page--offres-manuelle .price-cards .price-card {
+  flex: 0 0 14rem;
+  min-width: 14rem;
+}
+
 .page--offres-auto .offre-points,
 .page--offres-evaluation .offre-eval-block,
 .page--offres-aac .offre-steps,
