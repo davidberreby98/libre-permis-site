@@ -1,11 +1,10 @@
 /**
- * Libre Permis — Pages Permis accéléré (toutes destinations)
- * Design : hero, avantages, formules, CTA
+ * Libre Permis — Pages Repassage examen (toutes destinations)
+ * Design : hero, avantages, formules, CTA — cohérent avec permis-accelere-ville
  */
 
-/* ----- Hero : fond dégradé bleu/vert ----- */
-.hero--paris,
-.hero--accelere {
+/* ----- Hero : fond dégradé (bleu/vert, touche verte pour "seconde chance") ----- */
+.hero--repassage {
   position: relative;
   min-height: 55vh;
   display: flex;
@@ -14,25 +13,22 @@
   overflow: hidden;
 }
 
-.hero__paris-bg,
-.hero__accelere-bg {
+.hero__repassage-bg {
   position: absolute;
   inset: 0;
   background: linear-gradient(135deg, #0071bc 0%, #0f5590 35%, #1d8fd6 100%);
   z-index: 0;
 }
 
-.hero__paris-bg::after,
-.hero__accelere-bg::after {
+.hero__repassage-bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 50%);
+  background: radial-gradient(ellipse at 20% 80%, rgba(29, 143, 214, 0.25) 0%, transparent 45%);
   pointer-events: none;
 }
 
-.hero--paris .hero__content,
-.hero--accelere .hero__content {
+.hero--repassage .hero__content {
   position: relative;
   z-index: 2;
   text-align: center;
@@ -71,8 +67,7 @@
 }
 
 @media (min-width: 48rem) {
-  .hero--paris,
-  .hero--accelere {
+  .hero--repassage {
     min-height: 50vh;
   }
 
@@ -81,25 +76,22 @@
   }
 }
 
-/* ----- Avantages ----- */
-.paris-avantages,
-.accelere-avantages {
+/* ----- Avantages repassage ----- */
+.repassage-avantages {
   padding: var(--space-8) 0;
 }
 
-.paris-avantages__title,
-.accelere-avantages__title {
+.repassage-avantages__title {
   font-size: var(--font-size-h2);
   font-weight: var(--font-weight-semibold);
   color: var(--color-gray-900);
   text-align: center;
   margin: 0 0 var(--space-6);
-  max-width: 36ch;
+  max-width: 40ch;
   margin-inline: auto;
 }
 
-.paris-avantages__grid,
-.accelere-avantages__grid {
+.repassage-avantages__grid {
   display: grid;
   gap: var(--space-4);
   list-style: none;
@@ -108,21 +100,18 @@
 }
 
 @media (min-width: 48rem) {
-  .paris-avantages__grid,
-  .accelere-avantages__grid {
+  .repassage-avantages__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 64rem) {
-  .paris-avantages__grid,
-  .accelere-avantages__grid {
+  .repassage-avantages__grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-.paris-avantage,
-.accelere-avantage {
+.repassage-avantage {
   background: var(--color-white);
   padding: var(--space-4);
   border-radius: var(--card-radius);
@@ -131,65 +120,60 @@
   transition: box-shadow 0.2s, border-color 0.2s;
 }
 
-.paris-avantage:hover,
-.accelere-avantage:hover {
-  border-color: var(--color-blue-light);
-  box-shadow: 0 4px 16px rgba(13, 71, 161, 0.08);
+.repassage-avantage:hover {
+  border-color: var(--color-green-light);
+  box-shadow: 0 4px 16px rgba(46, 125, 50, 0.08);
 }
 
-.paris-avantage__icon,
-.accelere-avantage__icon {
+.repassage-avantage__icon {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 3rem;
   height: 3rem;
-  background: var(--color-blue-light);
-  color: var(--color-blue);
+  background: var(--color-green-light);
+  color: var(--color-green);
   border-radius: 12px;
   margin-bottom: var(--space-3);
 }
 
-.paris-avantage__icon svg,
-.accelere-avantage__icon svg {
+.repassage-avantage__icon svg {
   flex-shrink: 0;
 }
 
-.paris-avantage__title,
-.accelere-avantage__title {
+.repassage-avantage__title {
   font-size: 1.0625rem;
   font-weight: var(--font-weight-semibold);
   color: var(--color-gray-900);
   margin: 0 0 var(--space-1);
 }
 
-.paris-avantage__text,
-.accelere-avantage__text {
+.repassage-avantage__text {
   font-size: 0.9375rem;
   color: var(--color-gray-500);
   margin: 0;
   line-height: 1.5;
 }
 
-/* ----- Formules : centrées ----- */
-.page--permis-accelere .formule-section .container {
+/* ----- Formules repassage : centrées ----- */
+.page--repassage-examen .formule-section .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.page--permis-accelere .formule-section__header {
+.page--repassage-examen .formule-section__header {
   margin-bottom: var(--space-3);
 }
 
-.page--permis-accelere .formule-section__lead {
+.page--repassage-examen .formule-section__lead {
   margin-inline: auto;
   margin-bottom: var(--space-6);
   max-width: 48ch;
 }
 
-.page--permis-accelere .price-cards {
+.page--repassage-examen .price-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -197,14 +181,20 @@
   margin-bottom: var(--space-5);
 }
 
-.page--permis-accelere .price-card {
+.page--repassage-examen .price-card {
   width: 18rem;
   aspect-ratio: 2 / 1;
   min-height: unset;
 }
 
-.page--permis-accelere .formule-section .btn {
+.page--repassage-examen .formule-section .btn {
   margin-top: 0;
+}
+
+.price-card__info {
+  font-size: 0.8125rem;
+  color: var(--color-gray-500);
+  margin-top: auto;
 }
 
 /* ----- Formules : en-tête avec icône ----- */
@@ -238,25 +228,13 @@
   height: 1.75rem;
 }
 
-/* ----- Cartes prix : info supplémentaire ----- */
-.price-card__info {
-  font-size: 0.8125rem;
-  color: var(--color-gray-500);
-  margin-top: auto;
-}
-
-/* ----- Section auto : touche de couleur ----- */
-.permis-section--auto .formule-section__title {
-  color: var(--color-blue);
-}
-
-.permis-section--manuelle .formule-section__title {
+/* Section repassage : titre en vert (thème seconde chance) */
+.permis-section--repassage .formule-section__title {
   color: var(--color-green);
 }
 
 /* ----- CTA final ----- */
-.cta-final--paris,
-.cta-final--accelere {
+.cta-final--repassage {
   background: linear-gradient(135deg, #0071bc 0%, #0f5590 40%, #1d8fd6 100%);
 }
 

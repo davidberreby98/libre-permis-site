@@ -358,6 +358,17 @@ ul {
     padding-top: var(--space-1);
     margin-top: var(--space-1);
   }
+
+  /* Pont invisible pour maintenir le hover entre le lien et le dropdown */
+  .nav__dropdown::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    height: var(--space-1);
+    background: transparent;
+  }
 }
 
 .nav__item--dropdown:hover .nav__dropdown,

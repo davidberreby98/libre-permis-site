@@ -11,8 +11,9 @@
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/permis-b.css">
+  <link rel="stylesheet" href="css/repassage-examen-ville.css">
 </head>
-<body>
+<body class="page--repassage-examen">
   <a href="#main-content" class="skip-link">Aller au contenu</a>
   <header class="header" role="banner">
     <div class="header__inner">
@@ -81,40 +82,86 @@
   </header>
 
   <main id="main-content" role="main">
-    <section class="hero hero--permis-accelere" aria-labelledby="hero-title">
-      <div class="container">
-        <h1 id="hero-title" class="hero__title">Repassage examen en Seine-Saint-Denis (93)</h1>
-        <p class="hero__lead">Packs 6h, 10h ou 15h pour repasser l'examen du permis en Seine-Saint-Denis. Libre Permis Île-de-France.</p>
+    <section class="hero hero--repassage" aria-labelledby="hero-title">
+      <div class="hero__repassage-bg" aria-hidden="true"></div>
+      <div class="container hero__content hero__content--center">
+        <span class="hero__badge">Repassage 93</span>
+        <h1 id="hero-title" class="hero__title hero__title--dark">Repassage examen en Seine-Saint-Denis (93)</h1>
+        <p class="hero__lead hero__lead--dark">Vous avez échoué à l'examen ? Reprenez le volant avec nos packs flexibles. Réservez vos heures et repassez sereinement en Seine-Saint-Denis.</p>
       </div>
     </section>
 
-    <section class="formule-section permis-section--auto" aria-labelledby="section-content">
+    <section class="repassage-avantages section--alt" aria-labelledby="avantages-title">
       <div class="container">
-        <h2 id="section-content" class="formule-section__title">Repassage examen en 93</h2>
-        <p class="formule-section__lead">Choisissez le pack adapté pour repasser votre examen en Seine-Saint-Denis. Points de rendez-vous accessibles.</p>
+        <h2 id="avantages-title" class="repassage-avantages__title">Pourquoi choisir Libre Permis pour repasser en Seine-Saint-Denis</h2>
+        <ul class="repassage-avantages__grid">
+          <li class="repassage-avantage">
+            <span class="repassage-avantage__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <h3 class="repassage-avantage__title">RDV accessibles en transport</h3>
+            <p class="repassage-avantage__text">Nos points de rendez-vous sont desservis par le métro et le RER. Pas besoin de voiture pour rejoindre votre leçon.</p>
+          </li>
+          <li class="repassage-avantage">
+            <span class="repassage-avantage__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            </span>
+            <h3 class="repassage-avantage__title">Packs adaptés à votre besoin</h3>
+            <p class="repassage-avantage__text">6h, 10h ou 15h selon votre niveau. Choisissez le nombre d'heures qui vous convient pour être prêt le jour J.</p>
+          </li>
+          <li class="repassage-avantage">
+            <span class="repassage-avantage__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </span>
+            <h3 class="repassage-avantage__title">Examen maîtrisé en 93</h3>
+            <p class="repassage-avantage__text">Des moniteurs habitués aux conditions réelles de l'examen en Seine-Saint-Denis. Circulation dense, priorités, giratoires…</p>
+          </li>
+          <li class="repassage-avantage">
+            <span class="repassage-avantage__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
+            </span>
+            <h3 class="repassage-avantage__title">Conseils personnalisés</h3>
+            <p class="repassage-avantage__text">Un accompagnement sur mesure pour corriger les erreurs et gagner en confiance avant le prochain passage.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="formule-section permis-section--repassage" aria-labelledby="section-content">
+      <div class="container">
+        <div class="formule-section__header">
+          <span class="formule-section__icon formule-section__icon--green" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          <h2 id="section-content" class="formule-section__title">Packs repassage en 93</h2>
+        </div>
+        <p class="formule-section__lead">Choisissez le pack adapté à votre situation. Chaque pack comprend des heures de conduite avec un moniteur pour vous remettre à niveau avant l'examen.</p>
         <ul class="price-cards">
           <li class="price-card">
             <span class="price-card__label">6h</span>
             <span class="price-card__price">Pack 6h</span>
+            <span class="price-card__info">Idéal pour un petit rappel</span>
           </li>
           <li class="price-card">
             <span class="price-card__label">10h</span>
             <span class="price-card__price">Pack 10h</span>
+            <span class="price-card__info">Formule équilibrée</span>
           </li>
           <li class="price-card">
             <span class="price-card__label">15h</span>
             <span class="price-card__price">Pack 15h</span>
+            <span class="price-card__info">Préparation complète</span>
           </li>
         </ul>
         <a href="contact.html" class="btn btn--primary">Demander un devis</a>
       </div>
     </section>
 
-    <section class="cta-final" aria-labelledby="cta-title">
+    <section class="cta-final cta-final--repassage" aria-labelledby="cta-title">
       <div class="container">
         <h2 id="cta-title" class="cta-final__title">Prêt à repasser l'examen en 93 ?</h2>
-        <p class="cta-final__lead">Contactez-nous pour réserver vos heures de conduite.</p>
-        <a href="contact.html" class="btn btn--primary">Nous contacter</a>
+        <p class="cta-final__lead">Contactez-nous pour réserver vos heures et obtenir un devis personnalisé selon le pack choisi.</p>
+        <a href="contact.html" class="btn btn--primary cta-final__btn">Nous contacter</a>
       </div>
     </section>
   </main>
