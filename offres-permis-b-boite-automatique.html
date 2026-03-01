@@ -11,8 +11,9 @@
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/permis-b.css">
+  <link rel="stylesheet" href="css/offres.css">
 </head>
-<body>
+<body class="page--offres-auto">
   <a href="#main-content" class="skip-link">Aller au contenu</a>
   <header class="header" role="banner">
     <div class="header__inner">
@@ -81,22 +82,37 @@
   </header>
 
   <main id="main-content" role="main">
-    <section class="hero hero--permis-accelere" aria-labelledby="hero-title">
-      <div class="container">
+    <section class="hero hero--offres-auto" aria-labelledby="hero-title">
+      <div class="hero__offres-auto-bg" aria-hidden="true"></div>
+      <div class="container hero__content">
         <h1 id="hero-title" class="hero__title">Permis B boîte automatique</h1>
-        <p class="hero__lead">Formation sur véhicule à boîte automatique. 13h minimum, puis passerelle possible vers B.</p>
+        <p class="hero__lead">Formation sur véhicule à boîte automatique. 13 h minimum, puis passerelle possible vers le permis B complet.</p>
       </div>
     </section>
 
     <section class="formule-section permis-section--auto" aria-labelledby="section-content">
       <div class="container">
-        <h2 id="section-content" class="formule-section__title">Permis B boîte auto</h2>
-        <p class="formule-section__lead">Formation au permis BEA. Moins d'heures de conduite requises. Idéal pour une première approche.</p>
+        <h2 id="section-content" class="formule-section__title">Permis B boîte auto — simplicité et efficacité</h2>
+        <p class="formule-section__lead">Formation au permis BEA. Moins d'heures de conduite requises, plus de concentration sur la route. Idéal pour une première approche ou si vous visez une voiture automatique.</p>
+        <ul class="offre-points">
+          <li class="offre-point">
+            <span class="offre-point__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="3"/></svg>
+            </span>
+            <p class="offre-point__text"><strong>13 h minimum</strong> de conduite (contre 20 h en manuelle)</p>
+          </li>
+          <li class="offre-point">
+            <span class="offre-point__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+            </span>
+            <p class="offre-point__text"><strong>Passerelle possible</strong> vers B après 3 mois de conduite en BEA</p>
+          </li>
+        </ul>
         <a href="contact.html" class="btn btn--primary">Demander un devis</a>
       </div>
     </section>
 
-    <section class="cta-final" aria-labelledby="cta-title">
+    <section class="cta-final cta-final--offres-auto" aria-labelledby="cta-title">
       <div class="container">
         <h2 id="cta-title" class="cta-final__title">Intéressé par le permis boîte auto ?</h2>
         <p class="cta-final__lead">Contactez-nous pour un devis personnalisé.</p>

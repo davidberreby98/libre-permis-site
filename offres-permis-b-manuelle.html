@@ -11,8 +11,9 @@
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/permis-b.css">
+  <link rel="stylesheet" href="css/offres.css">
 </head>
-<body>
+<body class="page--offres-manuelle">
   <a href="#main-content" class="skip-link">Aller au contenu</a>
   <header class="header" role="banner">
     <div class="header__inner">
@@ -81,22 +82,64 @@
   </header>
 
   <main id="main-content" role="main">
-    <section class="hero hero--permis-accelere" aria-labelledby="hero-title">
+    <section class="hero hero--offres-manuelle" aria-labelledby="hero-title">
+      <div class="hero__offres-manuelle-bg" aria-hidden="true"></div>
+      <div class="container hero__content hero__content--split">
+        <div>
+          <h1 id="hero-title" class="hero__title">Permis B manuelle</h1>
+          <p class="hero__lead">Formation complète au permis de conduire avec boîte manuelle. Conduisez tous types de véhicules, en France comme à l'étranger.</p>
+        </div>
+        <span class="hero__icon-wrap" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+        </span>
+      </div>
+    </section>
+
+    <section class="offre-content section--alt" aria-labelledby="avantages-manuelle">
       <div class="container">
-        <h1 id="hero-title" class="hero__title">Permis B manuelle</h1>
-        <p class="hero__lead">Formation complète au permis de conduire avec boîte manuelle. Conduisez tous types de véhicules.</p>
+        <h2 id="avantages-manuelle" class="formule-section__title">Pourquoi choisir le permis B manuelle</h2>
+        <p class="formule-section__lead">Le permis B classique vous ouvre toutes les portes : conduisez n'importe quel véhicule léger, en France ou à l'étranger.</p>
+        <ul class="offre-avantages__grid">
+          <li class="offre-avantage">
+            <span class="offre-avantage__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            <div>
+              <h3 class="offre-avantage__title">Liberté totale</h3>
+              <p class="offre-avantage__text">Conduisez tous les véhicules de catégorie B, boîte manuelle ou automatique.</p>
+            </div>
+          </li>
+          <li class="offre-avantage">
+            <span class="offre-avantage__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            <div>
+              <h3 class="offre-avantage__title">Programme flexible</h3>
+              <p class="offre-avantage__text">Formation adaptée à votre rythme et à vos disponibilités.</p>
+            </div>
+          </li>
+          <li class="offre-avantage">
+            <span class="offre-avantage__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            </span>
+            <div>
+              <h3 class="offre-avantage__title">Moniteurs expérimentés</h3>
+              <p class="offre-avantage__text">Des enseignants à l'écoute pour vous accompagner jusqu'à l'examen.</p>
+            </div>
+          </li>
+        </ul>
       </div>
     </section>
 
     <section class="formule-section permis-section--auto" aria-labelledby="section-content">
       <div class="container">
         <h2 id="section-content" class="formule-section__title">Formation permis B manuelle</h2>
-        <p class="formule-section__lead">Formation classique au permis B avec boîte manuelle. Programme adapté à votre rythme.</p>
+        <p class="formule-section__lead">Formation classique au permis B avec boîte manuelle. 20 h minimum obligatoires, avec une évaluation de départ pour estimer vos besoins.</p>
         <a href="contact.html" class="btn btn--primary">Demander un devis</a>
       </div>
     </section>
 
-    <section class="cta-final" aria-labelledby="cta-title">
+    <section class="cta-final cta-final--offres-manuelle" aria-labelledby="cta-title">
       <div class="container">
         <h2 id="cta-title" class="cta-final__title">Intéressé par le permis B manuelle ?</h2>
         <p class="cta-final__lead">Contactez-nous pour un devis personnalisé.</p>

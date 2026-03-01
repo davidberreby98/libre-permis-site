@@ -1,0 +1,879 @@
+/**
+ * Libre Permis — Pages Offres (dropdown)
+ * Design différencié par thème : catalogue, B manuelle, B auto, évaluation, AAC, CS, passerelle
+ */
+
+/* ========== HERO CATALOGUE (offres.html) ========== */
+.hero--offres-catalogue {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero__offres-catalogue-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0D47A1 0%, #1B5E20 100%);
+  z-index: 0;
+}
+
+.hero__offres-catalogue-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero--offres-catalogue .hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: var(--space-8) var(--container-padding);
+}
+
+.hero--offres-catalogue .hero__title {
+  color: var(--color-white);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+.hero--offres-catalogue .hero__lead {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* ========== HERO B MANUELLE (bleu classique) ========== */
+.hero--offres-manuelle {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero__offres-manuelle-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, #0D47A1 0%, #1565C0 50%, #0A3D7A 100%);
+  z-index: 0;
+}
+
+.hero__offres-manuelle-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.hero--offres-manuelle .hero__content {
+  position: relative;
+  z-index: 2;
+  padding: var(--space-8) var(--container-padding);
+}
+
+.hero--offres-manuelle .hero__content--split {
+  display: grid;
+  gap: var(--space-6);
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+@media (min-width: 48rem) {
+  .hero--offres-manuelle .hero__content--split {
+    grid-template-columns: 1fr auto;
+    justify-items: stretch;
+    text-align: left;
+  }
+
+  .hero--offres-manuelle .hero__content--split .hero__icon-wrap {
+    justify-self: end;
+  }
+}
+
+.hero--offres-manuelle .hero__title {
+  color: var(--color-white);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero--offres-manuelle .hero__lead {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.hero__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 6rem;
+  height: 6rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1rem;
+  flex-shrink: 0;
+}
+
+.hero__icon-wrap svg {
+  width: 3rem;
+  height: 3rem;
+  color: var(--color-white);
+}
+
+/* ========== HERO B AUTO (teal moderne) ========== */
+.hero--offres-auto {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero__offres-auto-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #00695C 0%, #00897B 50%, #26A69A 100%);
+  z-index: 0;
+}
+
+.hero__offres-auto-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 80% 20%, rgba(255, 255, 255, 0.12) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero--offres-auto .hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: var(--space-8) var(--container-padding);
+}
+
+.hero--offres-auto .hero__title {
+  color: var(--color-white);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero--offres-auto .hero__lead {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* ========== HERO ÉVALUATION (ambre / première étape) ========== */
+.hero--offres-evaluation {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero__offres-evaluation-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #E65100 0%, #FF8F00 50%, #FFA726 100%);
+  z-index: 0;
+}
+
+.hero__offres-evaluation-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 30% 70%, rgba(255, 255, 255, 0.15) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+.hero--offres-evaluation .hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: var(--space-8) var(--container-padding);
+}
+
+.hero--offres-evaluation .hero__title {
+  color: var(--color-white);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.hero--offres-evaluation .hero__lead {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* ========== HERO CONDUITE ACCOMPAGNÉE (vert jeunesse) ========== */
+.hero--offres-aac {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero__offres-aac-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 50%, #43A047 100%);
+  z-index: 0;
+}
+
+.hero__offres-aac-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 10% 80%, rgba(255, 255, 255, 0.1) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.hero--offres-aac .hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: var(--space-8) var(--container-padding);
+}
+
+.hero--offres-aac .hero__title {
+  color: var(--color-white);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero--offres-aac .hero__lead {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* ========== HERO CONDUITE SUPERVISÉE (vert doux, sérénité) ========== */
+.hero--offres-cs {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero__offres-cs-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #2E7D32 0%, #43A047 60%, #66BB6A 100%);
+  z-index: 0;
+}
+
+.hero__offres-cs-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 70% 30%, rgba(255, 255, 255, 0.12) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.hero--offres-cs .hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: var(--space-8) var(--container-padding);
+}
+
+.hero--offres-cs .hero__title {
+  color: var(--color-white);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero--offres-cs .hero__lead {
+  color: rgba(255, 255, 255, 0.95);
+}
+
+/* ========== HERO PASSERELLE (bleu-vert transition) ========== */
+.hero--offres-passerelle {
+  position: relative;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero__offres-passerelle-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #0D47A1 0%, #1B5E20 100%);
+  z-index: 0;
+}
+
+.hero__offres-passerelle-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.hero--offres-passerelle .hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: var(--space-8) var(--container-padding);
+}
+
+.hero--offres-passerelle .hero__title {
+  color: var(--color-white);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero--offres-passerelle .hero__lead {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* ========== CENTRAGE GÉNÉRAL — pages offres ========== */
+.page--offres-catalogue .formule-section .container,
+.page--offres-manuelle .offre-content .container,
+.page--offres-manuelle .formule-section .container,
+.page--offres-auto .formule-section .container,
+.page--offres-evaluation .formule-section .container,
+.page--offres-aac .formule-section .container,
+.page--offres-cs .formule-section .container,
+.page--offres-passerelle .formule-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.page--offres-catalogue .formule-section__title,
+.page--offres-manuelle .formule-section__title,
+.page--offres-manuelle .offre-content .formule-section__title,
+.page--offres-auto .formule-section__title,
+.page--offres-evaluation .formule-section__title,
+.page--offres-aac .formule-section__title,
+.page--offres-cs .formule-section__title,
+.page--offres-passerelle .formule-section__title {
+  text-align: center;
+  margin-inline: auto;
+}
+
+.page--offres-catalogue .formule-section__lead,
+.page--offres-manuelle .formule-section__lead,
+.page--offres-manuelle .offre-content .formule-section__lead,
+.page--offres-auto .formule-section__lead,
+.page--offres-evaluation .formule-section__lead,
+.page--offres-aac .formule-section__lead,
+.page--offres-cs .formule-section__lead,
+.page--offres-passerelle .formule-section__lead {
+  text-align: center;
+  margin-inline: auto;
+}
+
+/* CTA / boutons : espacement pour ne pas coller aux éléments au-dessus */
+.page--offres-catalogue .formule-section .btn,
+.page--offres-manuelle .formule-section .btn,
+.page--offres-auto .formule-section .btn,
+.page--offres-evaluation .formule-section .btn,
+.page--offres-aac .formule-section .btn,
+.page--offres-cs .formule-section .btn,
+.page--offres-passerelle .formule-section .btn {
+  margin-top: var(--space-6);
+}
+
+/* CTA après blocs spécifiques (offre-points, offre-eval-block, etc.) */
+.page--offres-auto .offre-points + .btn,
+.page--offres-evaluation .offre-eval-block + .btn,
+.page--offres-aac .offre-steps + .btn,
+.page--offres-cs .offre-reassurance + .btn,
+.page--offres-passerelle .offre-passerelle-info + .btn {
+  margin-top: var(--space-6);
+}
+
+/* Grilles et listes : largeur complète dans le conteneur centré */
+.page--offres-manuelle .offre-avantages__grid,
+.page--offres-catalogue .formations__grid {
+  width: 100%;
+  max-width: 64rem;
+}
+
+.page--offres-auto .offre-points,
+.page--offres-evaluation .offre-eval-block,
+.page--offres-aac .offre-steps,
+.page--offres-cs .offre-reassurance,
+.page--offres-passerelle .offre-passerelle-info {
+  width: 100%;
+  max-width: 48rem;
+}
+
+/* CTA final (pages offres) : centrage et espacement */
+.page--offres-catalogue .cta-final .container,
+.page--offres-manuelle .cta-final .container,
+.page--offres-auto .cta-final .container,
+.page--offres-evaluation .cta-final .container,
+.page--offres-aac .cta-final .container,
+.page--offres-cs .cta-final .container,
+.page--offres-passerelle .cta-final .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.page--offres-catalogue .cta-final__lead,
+.page--offres-manuelle .cta-final__lead,
+.page--offres-auto .cta-final__lead,
+.page--offres-evaluation .cta-final__lead,
+.page--offres-aac .cta-final__lead,
+.page--offres-cs .cta-final__lead,
+.page--offres-passerelle .cta-final__lead {
+  margin-bottom: var(--space-6);
+}
+
+.page--offres-catalogue .cta-final .btn,
+.page--offres-manuelle .cta-final .btn,
+.page--offres-auto .cta-final .btn,
+.page--offres-evaluation .cta-final .btn,
+.page--offres-aac .cta-final .btn,
+.page--offres-cs .cta-final .btn,
+.page--offres-passerelle .cta-final .btn {
+  margin-top: 0;
+}
+
+/* ========== SECTION CATALOGUE — cartes avec icônes ========== */
+.page--offres-catalogue .formule-section {
+  padding: var(--space-8) 0;
+  background: var(--color-gray-100);
+}
+
+.page--offres-catalogue .card--formation {
+  border-top: 3px solid var(--color-blue);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.page--offres-catalogue .card--formation:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(13, 71, 161, 0.12);
+}
+
+.card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--color-blue-light);
+  color: var(--color-blue);
+  border-radius: 10px;
+  margin-bottom: var(--space-3);
+}
+
+.card__icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.card--formation.card--auto .card__icon {
+  background: #E0F2F1;
+  color: #00897B;
+}
+
+.card--formation.card--evaluation .card__icon {
+  background: #FFF3E0;
+  color: #E65100;
+}
+
+.card--formation.card--aac .card__icon {
+  background: var(--color-green-light);
+  color: var(--color-green);
+}
+
+.card--formation.card--cs .card__icon {
+  background: #E8F5E9;
+  color: #43A047;
+}
+
+.card--formation.card--passerelle .card__icon {
+  background: linear-gradient(135deg, var(--color-blue-light) 0%, var(--color-green-light) 100%);
+  color: var(--color-blue);
+}
+
+/* ========== LAYOUT PAGE B MANUELLE — avantages en grille ========== */
+.page--offres-manuelle .offre-content {
+  padding: var(--space-8) 0;
+}
+
+.offre-avantages {
+  padding: var(--space-6) 0;
+}
+
+.offre-avantages__grid {
+  display: grid;
+  gap: var(--space-4);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 48rem) {
+  .offre-avantages__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 64rem) {
+  .offre-avantages__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.offre-avantage {
+  display: flex;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  background: var(--color-white);
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  text-align: left;
+}
+
+.offre-avantage:hover {
+  border-color: var(--color-blue);
+  box-shadow: 0 4px 16px rgba(13, 71, 161, 0.08);
+}
+
+.offre-avantage__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  background: var(--color-blue-light);
+  color: var(--color-blue);
+  border-radius: 10px;
+}
+
+.offre-avantage__icon svg {
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+.offre-avantage__title {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  margin: 0 0 var(--space-1);
+}
+
+.offre-avantage__text {
+  font-size: 0.9375rem;
+  color: var(--color-gray-500);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Section manuelle : accent bleu */
+.page--offres-manuelle .formule-section__title {
+  color: var(--color-blue);
+}
+
+/* ========== LAYOUT PAGE B AUTO — grille horizontale ========== */
+.page--offres-auto .formule-section {
+  background: var(--color-gray-100);
+}
+
+.page--offres-auto .formule-section__title {
+  color: #00695C;
+}
+
+.offre-points {
+  display: grid;
+  gap: var(--space-4);
+  list-style: none;
+  margin: var(--space-5) 0 0;
+  padding: 0;
+}
+
+@media (min-width: 48rem) {
+  .offre-points {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.offre-point {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  background: var(--color-white);
+  border-radius: var(--card-radius);
+  border: 1px solid #E0F2F1;
+  text-align: left;
+}
+
+.offre-point__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  background: #E0F2F1;
+  color: #00897B;
+  border-radius: 8px;
+}
+
+.offre-point__icon svg {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.offre-point__text {
+  font-size: 0.9375rem;
+  color: var(--color-gray-500);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ========== LAYOUT PAGE ÉVALUATION — simple et rassurant ========== */
+.page--offres-evaluation .formule-section {
+  padding: var(--space-8) 0;
+}
+
+.page--offres-evaluation .formule-section__title {
+  color: #E65100;
+}
+
+.offre-eval-block {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+  padding: var(--space-5);
+  background: #FFF8E1;
+  border-radius: var(--card-radius);
+  border-left: 4px solid #FF8F00;
+  text-align: left;
+}
+
+.offre-eval-block__title {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  margin: 0 0 var(--space-1);
+}
+
+.offre-eval-block__text {
+  font-size: 0.9375rem;
+  color: var(--color-gray-500);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.offre-eval-price {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: var(--font-weight-bold);
+  color: #E65100;
+  margin-top: var(--space-2);
+}
+
+/* ========== LAYOUT PAGE AAC — étapes / avantages ========== */
+.page--offres-aac .formule-section__title {
+  color: var(--color-green);
+}
+
+.offre-steps {
+  list-style: none;
+  margin: var(--space-5) 0 0;
+  padding: 0;
+  counter-reset: step;
+  text-align: left;
+}
+
+.offre-step {
+  position: relative;
+  display: flex;
+  gap: var(--space-4);
+  padding: var(--space-4) 0;
+  border-bottom: 1px solid var(--color-gray-200);
+  counter-increment: step;
+}
+
+.offre-step:last-child {
+  border-bottom: none;
+}
+
+.offre-step__num {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-green-light);
+  color: var(--color-green);
+  font-weight: var(--font-weight-bold);
+  font-size: 1rem;
+  border-radius: 50%;
+}
+
+.offre-step__num::before {
+  content: counter(step);
+}
+
+.offre-step__title {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  margin: 0 0 var(--space-1);
+}
+
+.offre-step__text {
+  font-size: 0.9375rem;
+  color: var(--color-gray-500);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ========== LAYOUT PAGE CS — rassurant ========== */
+.page--offres-cs .formule-section {
+  background: var(--color-gray-100);
+}
+
+.page--offres-cs .formule-section__title {
+  color: var(--color-green);
+}
+
+.offre-reassurance {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+  text-align: left;
+  justify-content: center;
+}
+
+.offre-reassurance__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  background: var(--color-white);
+  border-radius: var(--card-radius);
+  border: 1px solid var(--color-green-light);
+  flex: 1;
+  min-width: 14rem;
+}
+
+.offre-reassurance__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  background: var(--color-green-light);
+  color: var(--color-green);
+  border-radius: 50%;
+}
+
+.offre-reassurance__icon svg {
+  width: 1.1rem;
+  height: 1.1rem;
+}
+
+.offre-reassurance__text {
+  font-size: 0.9375rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-900);
+  margin: 0;
+}
+
+/* ========== LAYOUT PAGE PASSERELLE — contenu structuré ========== */
+.page--offres-passerelle .formule-section__title {
+  background: linear-gradient(135deg, var(--color-blue), var(--color-green));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.offre-passerelle-info {
+  display: grid;
+  gap: var(--space-4);
+  margin-top: var(--space-5);
+  padding: var(--space-4);
+  background: linear-gradient(135deg, var(--color-blue-light) 0%, var(--color-green-light) 100%);
+  border-radius: var(--card-radius);
+  text-align: left;
+}
+
+@media (min-width: 48rem) {
+  .offre-passerelle-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.offre-passerelle-info__item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+}
+
+.offre-passerelle-info__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--color-white);
+  color: var(--color-blue);
+  border-radius: 10px;
+}
+
+.offre-passerelle-info__icon svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.offre-passerelle-info__label {
+  font-size: 0.8125rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 var(--space-1);
+}
+
+.offre-passerelle-info__value {
+  font-size: 1rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  margin: 0;
+}
+
+/* ========== CTA FINAL — variantes couleur ========== */
+.cta-final--offres-manuelle {
+  background: linear-gradient(135deg, #0D47A1 0%, #1565C0 100%);
+}
+
+.cta-final--offres-auto {
+  background: linear-gradient(135deg, #00695C 0%, #00897B 100%);
+}
+
+.cta-final--offres-evaluation {
+  background: linear-gradient(135deg, #E65100 0%, #FF8F00 100%);
+}
+
+.cta-final--offres-aac,
+.cta-final--offres-cs {
+  background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%);
+}
+
+.cta-final--offres-passerelle {
+  background: linear-gradient(135deg, #0D47A1 0%, #1B5E20 100%);
+}
+
+.cta-final--offres-catalogue {
+  background: linear-gradient(135deg, #0D47A1 0%, #1B5E20 100%);
+}

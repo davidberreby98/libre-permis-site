@@ -18,7 +18,7 @@
 .hero__accelere-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #0071bc 0%, #0f5590 35%, #1d8fd6 100%);
+  background:#0f5590;
   z-index: 0;
 }
 
