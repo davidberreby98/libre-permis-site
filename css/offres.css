@@ -393,6 +393,14 @@
   max-width: 64rem;
 }
 
+.page--offres-manuelle .price-cards,
+.page--offres-auto .price-cards,
+.page--offres-aac .price-cards,
+.page--offres-passerelle .price-cards {
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-4);
+}
+
 .page--offres-auto .offre-points,
 .page--offres-evaluation .offre-eval-block,
 .page--offres-aac .offre-steps,
