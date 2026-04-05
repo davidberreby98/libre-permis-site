@@ -173,28 +173,23 @@
   max-width: 48ch;
 }
 
-.page--repassage-examen .price-cards {
-  display: flex;
-  flex-wrap: wrap;
+.page--repassage-examen .formule-section .price-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
   justify-content: center;
   gap: var(--space-4);
   margin-bottom: var(--space-5);
+  max-width: 58rem;
+  margin-inline: auto;
 }
 
-.page--repassage-examen .price-card {
-  width: 18rem;
-  aspect-ratio: 2 / 1;
-  min-height: unset;
+.page--repassage-examen .formule-section .price-card {
+  width: 100%;
+  max-width: none;
 }
 
 .page--repassage-examen .formule-section .btn {
   margin-top: 0;
-}
-
-.price-card__info {
-  font-size: 0.8125rem;
-  color: var(--color-gray-500);
-  margin-top: auto;
 }
 
 /* ----- Formules : en-tête avec icône ----- */
@@ -240,4 +235,215 @@
 
 .cta-final__btn {
   min-width: 12rem;
+}
+
+/* ----- Hero repassage « premium » (fond noir, accent or) ----- */
+.hero--repassage-premium {
+  position: relative;
+  min-height: 58vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero__repassage-premium-bg {
+  position: absolute;
+  inset: 0;
+  background: #0a0a0a;
+  z-index: 0;
+}
+
+.hero__repassage-premium-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 120%, rgba(197, 162, 103, 0.12) 0%, transparent 45%);
+  pointer-events: none;
+}
+
+.hero--repassage-premium .hero__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: var(--space-8) var(--container-padding);
+}
+
+.hero--repassage-premium .hero__title--dark {
+  text-shadow: none;
+  max-width: 22ch;
+  margin-inline: auto;
+}
+
+.hero--repassage-premium .hero__lead--dark {
+  max-width: 36ch;
+  margin-inline: auto;
+}
+
+/* ----- « Quatre situations, une solution » ----- */
+.repassage-situations {
+  padding: var(--space-8) 0;
+  background: var(--color-cream);
+}
+
+.repassage-situations__title {
+  font-size: clamp(1.35rem, 4vw, 1.75rem);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  text-align: center;
+  margin: 0 0 var(--space-6);
+  max-width: 22ch;
+  margin-inline: auto;
+  line-height: var(--line-height-tight);
+}
+
+.repassage-situations__grid {
+  display: grid;
+  gap: var(--space-3);
+  max-width: 32rem;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  align-items: stretch;
+}
+
+@media (min-width: 48rem) {
+  .repassage-situations__grid {
+    max-width: none;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.repassage-situation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: var(--space-3);
+  padding: var(--space-5) var(--space-4);
+  background: var(--color-white);
+  border-radius: var(--card-radius);
+  border: 1px solid var(--color-gray-200);
+  box-shadow: var(--card-shadow);
+  min-height: 17.5rem;
+  height: 100%;
+}
+
+.repassage-situation__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  flex-shrink: 0;
+  background: var(--color-blue-light);
+  color: var(--color-blue);
+  border-radius: 12px;
+}
+
+.repassage-situation__icon svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.repassage-situation__title {
+  font-size: 1.0625rem;
+  font-weight: var(--font-weight-semibold);
+  margin: 0 0 var(--space-1);
+  color: var(--color-gray-900);
+}
+
+.repassage-situation__text {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-gray-500);
+  line-height: 1.5;
+  flex-grow: 1;
+  max-width: 38ch;
+}
+
+.repassage-situation__text strong {
+  color: var(--color-gray-900);
+  font-weight: var(--font-weight-semibold);
+}
+
+.repassage-situation > div {
+  width: 100%;
+  max-width: 100%;
+}
+
+/* ----- Formules repassage (tarifs maquette) ----- */
+.repassage-formules {
+  padding: var(--space-8) 0;
+  background: var(--color-white);
+}
+
+.repassage-formules__header {
+  text-align: center;
+  margin-bottom: var(--space-6);
+  max-width: 36ch;
+  margin-inline: auto;
+}
+
+.repassage-formules__eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  opacity: 0.85;
+  margin-bottom: var(--space-2);
+}
+
+.repassage-formules__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin: 0 0 var(--space-2);
+}
+
+.repassage-formules__lead {
+  margin: 0;
+  font-size: var(--font-size-lead);
+  color: var(--color-gray-500);
+}
+
+/* Tarifs repassage : aligné sur .price-cards (permis-b) — grille centrée, cartes plus larges */
+.repassage-formules .price-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
+  gap: var(--space-4);
+  width: 100%;
+  max-width: 60rem;
+  margin: 0 auto var(--space-4);
+  padding: 0;
+  list-style: none;
+  align-items: start;
+  justify-items: stretch;
+}
+
+.repassage-price-note {
+  display: flex;
+  gap: var(--space-2);
+  align-items: flex-start;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-4);
+  font-size: 0.9375rem;
+  color: var(--color-gray-700);
+  background: var(--color-white);
+  border: 1px solid rgba(13, 71, 161, 0.2);
+  border-radius: var(--card-radius);
+}
+
+.repassage-price-note__icon {
+  flex-shrink: 0;
+  font-size: 1.125rem;
+  line-height: 1.2;
+}
+
+.page--repassage-examen .repassage-formules .btn--primary {
+  display: flex;
+  margin: var(--space-5) auto 0;
 }

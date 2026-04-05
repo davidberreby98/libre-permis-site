@@ -1,49 +1,243 @@
 /**
  * Libre Permis — Styles spécifiques page Accueil
- * Navbar optimisée (preview, à répliquer sur les autres pages si validé)
+ * (Navbar identique aux autres pages : styles globaux dans main.css)
  */
 
-/* ----- Navbar : hauteur 4rem, logo 12rem avec overflow caché ----- */
-.page--accueil .header__inner {
-  height: 4rem;
-  min-height: 4rem;
-  max-height: 4rem;
-  padding: 0 var(--container-padding);
-}
-
-.page--accueil .header__logo {
-  height: 4rem;
-  overflow: hidden;
+/* ----- Hero accueil (vert forêt + or, maquette Paris 10) ----- */
+.hero--home {
+  position: relative;
+  min-height: 58vh;
   display: flex;
   align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
 
-.page--accueil .header__logo-img {
-  height: 12rem;
-  width: auto;
-  object-fit: contain;
-  object-position: center;
+.hero__home-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(145deg, var(--color-forest) 0%, #243d30 45%, #1a2e24 100%);
 }
 
-/* ----- Logo décalé vers la gauche ----- */
-.page--accueil .header__logo {
-  margin-left: calc(-1 * var(--space-1));
+.hero__home-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 50% 0%, rgba(197, 162, 103, 0.14) 0%, transparent 50%);
+  pointer-events: none;
 }
 
-/* ----- Espacement des éléments de la nav ----- */
-@media (min-width: 64rem) {
-  .page--accueil .nav__list {
-    gap: var(--space-2);
-  }
+.hero--home .hero__content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
 
-  .page--accueil .header__inner {
+.hero--home .hero__title--dark {
+  max-width: 20ch;
+  margin-inline: auto;
+  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
+}
+
+.hero--home .hero__lead--dark {
+  max-width: 40ch;
+  margin-inline: auto;
+}
+
+.hero--home .hero__lead--dark strong {
+  color: var(--color-white);
+  font-weight: var(--font-weight-semibold);
+}
+
+/* ----- Notre implantation ----- */
+.home-implantation {
+  padding: var(--space-8) 0;
+}
+
+.home-implantation__eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-gold-muted);
+  text-align: center;
+  margin: 0 0 var(--space-2);
+}
+
+.home-implantation__title {
+  font-size: var(--font-size-h2);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  text-align: center;
+  margin: 0 0 var(--space-6);
+  line-height: var(--line-height-tight);
+}
+
+.home-implantation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  max-width: 44rem;
+  margin-inline: auto;
+}
+
+.home-implant-card {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  padding: var(--space-4) var(--space-4);
+  background: var(--color-white);
+  border-radius: var(--card-radius);
+  border: 1px solid var(--color-gray-200);
+  box-shadow: var(--card-shadow);
+}
+
+.home-implant-card__icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 10px;
+  background: var(--color-forest);
+  color: var(--color-white);
+}
+
+.home-implant-card__title {
+  font-size: 1.0625rem;
+  font-weight: var(--font-weight-semibold);
+  color: var(--color-gray-900);
+  margin: 0 0 var(--space-2);
+  line-height: var(--line-height-tight);
+}
+
+.home-implant-card__text {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-gray-500);
+  line-height: 1.5;
+}
+
+@media (min-width: 48rem) {
+  .home-implant-card {
+    padding: var(--space-5) var(--space-5);
     gap: var(--space-5);
   }
+
+  .home-implant-card__icon {
+    width: 3.25rem;
+    height: 3.25rem;
+  }
 }
 
-/* ----- Menu mobile : top ajusté à la hauteur navbar (4rem) ----- */
-@media (max-width: 63.9375rem) {
-  .page--accueil .nav {
-    top: 4rem;
+/* ----- Ce que nous proposons ----- */
+.home-proposals {
+  padding: var(--space-8) 0;
+  background: var(--color-white);
+}
+
+.home-proposals__eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold-muted);
+  text-align: center;
+  margin: 0 0 var(--space-2);
+}
+
+.home-proposals__lead {
+  margin-top: calc(-1 * var(--space-2));
+}
+
+.home-proposals__grid {
+  list-style: none;
+  margin: var(--space-5) 0 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-4);
+  max-width: 52rem;
+  margin-inline: auto;
+}
+
+@media (min-width: 48rem) {
+  .home-proposals__grid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
   }
+}
+
+.home-proposal-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: var(--space-5) var(--space-4);
+  background: var(--color-white);
+  border-radius: var(--card-radius);
+  border: 1px solid rgba(197, 162, 103, 0.35);
+  box-shadow: var(--card-shadow);
+}
+
+.home-proposal-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-bottom: var(--space-3);
+  border-radius: 10px;
+  background: var(--color-gray-100);
+  color: var(--color-blue);
+}
+
+.home-proposal-card__title {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-gray-900);
+  margin: 0 0 var(--space-2);
+  line-height: var(--line-height-tight);
+}
+
+.home-proposal-card__text {
+  margin: 0 0 var(--space-4);
+  font-size: 0.9375rem;
+  color: var(--color-gray-500);
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.home-proposal-card__link {
+  margin-top: auto;
+}
+
+/* ----- Accès rapides : ligne d’accroche or ----- */
+.home-quick__eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold-muted);
+  text-align: center;
+  margin: 0 0 var(--space-2);
+}
+
+/* CTA carte « Toutes les formules Permis B » : une seule ligne dans le carré */
+.page--accueil .card__link--catalogue-offres {
+  white-space: nowrap;
+  min-width: unset;
+  max-width: 100%;
+  padding-inline: var(--space-2);
+  font-size: 0.8125rem;
 }

@@ -61,30 +61,95 @@
     <section class="hero hero--repassage" aria-labelledby="hero-title">
       <div class="hero__repassage-bg" aria-hidden="true"></div>
       <div class="container hero__content hero__content--center">
-        <span class="hero__badge">Repassage Île-de-France</span>
-        <h1 id="hero-title" class="hero__title hero__title--dark">Repassage examen</h1>
-        <p class="hero__lead hero__lead--dark">Packs 6h, 10h ou 15h pour repasser l'examen du permis. Choisissez votre département et réservez vos heures près de chez vous.</p>
+        <span class="hero__badge">Repassage · Île-de-France</span>
+        <h1 id="hero-title" class="hero__title hero__title--dark">Repassage examen du permis</h1>
+        <p class="hero__lead hero__lead--dark">Après un échec, reprenez avec une préparation ciblée : évaluation 65&nbsp;€, packs d'heures et accompagnement jusqu'à la réservation de votre place d'examen.</p>
       </div>
     </section>
 
-    <section class="formule-section permis-section--repassage permis-section--auto" aria-labelledby="section-packs">
+    <!-- ========== QUATRE SITUATIONS ========== -->
+    <section class="repassage-situations" aria-labelledby="situations-title">
       <div class="container">
-        <h2 id="section-packs" class="formule-section__title">Nos packs</h2>
-        <p class="formule-section__lead">Choisissez le pack adapté à votre situation.</p>
-        <ul class="price-cards">
-          <li class="price-card">
-            <span class="price-card__label">6h</span>
-            <span class="price-card__price">Pack 6h</span>
+        <h2 id="situations-title" class="repassage-situations__title">Quatre situations, une solution</h2>
+        <ul class="repassage-situations__grid">
+          <li class="repassage-situation">
+            <span class="repassage-situation__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+            </span>
+            <div>
+              <h3 class="repassage-situation__title">Échec récent à l'examen</h3>
+              <p class="repassage-situation__text">On analyse les points d'échec et on construit une préparation ciblée. Pas de formation de zéro — on travaille <strong>uniquement les lacunes identifiées</strong>.</p>
+            </div>
           </li>
-          <li class="price-card">
-            <span class="price-card__label">10h</span>
-            <span class="price-card__price">Pack 10h</span>
+          <li class="repassage-situation">
+            <span class="repassage-situation__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 22h14"/><path d="M5 2h14"/><path d="M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22"/><path d="M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"/></svg>
+            </span>
+            <div>
+              <h3 class="repassage-situation__title">Longue attente entre deux passages</h3>
+              <p class="repassage-situation__text">On accélère la réservation et on maintient votre niveau en attendant. <strong>Pas question de perdre vos acquis.</strong></p>
+            </div>
           </li>
-          <li class="price-card">
-            <span class="price-card__label">15h</span>
-            <span class="price-card__price">Pack 15h</span>
+          <li class="repassage-situation">
+            <span class="repassage-situation__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"/></svg>
+            </span>
+            <div>
+              <h3 class="repassage-situation__title">Changement d'auto-école</h3>
+              <p class="repassage-situation__text">On reprend votre dossier, on évalue où vous en êtes avec <strong>l'évaluation à 65&nbsp;€</strong>, et on repart sur des bases claires.</p>
+            </div>
+          </li>
+          <li class="repassage-situation">
+            <span class="repassage-situation__icon" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            </span>
+            <div>
+              <h3 class="repassage-situation__title">Permis étranger à repasser</h3>
+              <p class="repassage-situation__text">Permis hors Union européenne à convertir ou repasser ? On vous accompagne sur les <strong>spécificités de la conduite française</strong>.</p>
+            </div>
           </li>
         </ul>
+      </div>
+    </section>
+
+    <!-- ========== FORMULES & TARIFS ========== -->
+    <section class="repassage-formules section--alt" aria-labelledby="formules-repassage-title">
+      <div class="container">
+        <header class="repassage-formules__header">
+          <span class="repassage-formules__eyebrow">Offres</span>
+          <h2 id="formules-repassage-title" class="repassage-formules__title">Formules repassage</h2>
+          <p class="repassage-formules__lead">Ajustées selon votre niveau après l'évaluation obligatoire. Les mêmes tarifs partout en Île-de-France — affinez les détails sur la page de votre département.</p>
+        </header>
+        <ul class="price-cards" role="list">
+          <li class="price-card price-card--repassage">
+            <span class="price-card__meta">Obligatoire · prix fixe</span>
+            <span class="price-card__label">Évaluation de reprise</span>
+            <span class="price-card__price">65&nbsp;€</span>
+            <span class="price-card__info">Bilan + planning de repassage</span>
+          </li>
+          <li class="price-card price-card--repassage">
+            <span class="price-card__meta">À partir de</span>
+            <span class="price-card__label">Pack repassage 6h</span>
+            <span class="price-card__price">300&nbsp;€</span>
+            <span class="price-card__info">Rappel ciblé avant l'examen</span>
+          </li>
+          <li class="price-card price-card--repassage price-card--featured">
+            <span class="price-card__meta">À partir de</span>
+            <span class="price-card__label">Pack repassage 10h</span>
+            <span class="price-card__price">390&nbsp;€</span>
+            <span class="price-card__info">Formule la plus demandée</span>
+          </li>
+          <li class="price-card price-card--repassage">
+            <span class="price-card__meta">À partir de</span>
+            <span class="price-card__label">Leçon à l'unité</span>
+            <span class="price-card__price">45&nbsp;€</span>
+            <span class="price-card__info">Profils proches de l'examen</span>
+          </li>
+        </ul>
+        <p class="repassage-price-note" role="note">
+          <span class="repassage-price-note__icon" aria-hidden="true">ℹ️</span>
+          <span>Prise en charge rapide · Planning optimisé · Accompagnement jusqu'à l'examen. Les tarifs finaux sont confirmés après l'évaluation.</span>
+        </p>
         <a href="contact.html" class="btn btn--primary">Demander un devis</a>
       </div>
     </section>
@@ -104,6 +169,52 @@
           <li><a href="repassage-examen-val-de-marne-94.html" class="region-links__link">Val-de-Marne (94)</a></li>
           <li><a href="repassage-examen-val-doise-95.html" class="region-links__link">Val-d'Oise (95)</a></li>
         </ul>
+      </div>
+    </section>
+
+    <!-- ========== FAQ ========== -->
+    <section class="faq" aria-labelledby="faq-repassage-title">
+      <div class="container faq__inner">
+        <p class="faq__eyebrow">Examen</p>
+        <h2 id="faq-repassage-title" class="faq__title">Questions fréquentes — repassage</h2>
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary class="faq__question">Combien de temps après un échec peut-on repasser ?</summary>
+            <div class="faq__answer">
+              <p>Les délais légaux et la disponibilité des places varient. En pratique, nous vous aidons à <strong>optimiser le calendrier</strong> : reprise des heures, demande de date et préparation pour le prochain créneau.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Puis-je venir si j'ai le code mais plus de moniteur ?</summary>
+            <div class="faq__answer">
+              <p>Oui. Si votre code est encore valide, nous pouvons <strong>reprendre votre dossier</strong> et enchaîner sur la conduite avec une évaluation de reprise à 65&nbsp;€ pour cadrer le nombre d'heures.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Est-ce que vous gérez la réservation de ma place d'examen ?</summary>
+            <div class="faq__answer">
+              <p>Nous vous <strong>accompagnons dans les démarches</strong> et la planification. La réservation dépend aussi des créneaux du centre d'examen ; nous vous guidons pour sécuriser le meilleur timing avec votre préparation.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">J'ai échoué plusieurs fois. Est-ce que ça change quelque chose ?</summary>
+            <div class="faq__answer">
+              <p>Cela ne vous empêche pas de repasser. Nous adaptons le <strong>volume d'heures</strong> et le contenu des séances sur l'analyse détaillée de vos échecs, avec un objectif réaliste.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Proposez-vous le repassage en boîte automatique ?</summary>
+            <div class="faq__answer">
+              <p>Oui, selon les formules et véhicules disponibles. Indiquez-nous votre <strong>type de permis visé</strong> (manuelle ou BEA) dès le premier contact pour adapter le véhicule et le parcours.</p>
+            </div>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">J'ai un permis étranger. Dois-je repasser en France ?</summary>
+            <div class="faq__answer">
+              <p>Cela dépend du pays d'origine et des accords (UE / hors UE). Nous vous orientons vers la <strong>bonne démarche</strong> : échange, épreuves partielles ou formation complète, selon votre situation.</p>
+            </div>
+          </details>
+        </div>
       </div>
     </section>
 

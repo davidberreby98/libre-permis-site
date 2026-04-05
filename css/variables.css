@@ -11,6 +11,13 @@
   --color-green: #2E7D32;
   --color-green-dark: #1B5E20;
   --color-green-light: #E8F5E9;
+  /* Vert forêt (CTA maquettes mobile) */
+  --color-forest: #1a3326;
+  --color-forest-hover: #14281f;
+  /* Accent or / sable (titres premium, prix) */
+  --color-gold: #c5a267;
+  --color-gold-muted: #b8955a;
+  --color-cream: #f5f3ef;
 
   /* ----- Neutres ----- */
   --color-white: #FFFFFF;
@@ -63,4 +70,7 @@
   /* ----- Layout ----- */
   --container-max: 72rem;
   --container-padding: var(--space-3);
+
+  /* Barre CTA fixe mobile */
+  --sticky-cta-height: 3.25rem;
 }

@@ -44,6 +44,69 @@
   color: rgba(255, 255, 255, 0.92);
 }
 
+/* Variante sombre type maquette « Nos formations » */
+.hero--offres-catalogue.hero--formations-dark .hero__offres-catalogue-bg {
+  background: #0a0a0a;
+}
+
+.hero--offres-catalogue.hero--formations-dark .hero__offres-catalogue-bg::after {
+  background: radial-gradient(ellipse at 50% 0%, rgba(197, 162, 103, 0.1) 0%, transparent 45%);
+}
+
+.hero--offres-catalogue.hero--formations-dark .hero__content {
+  text-align: center;
+}
+
+.hero--offres-catalogue.hero--formations-dark .hero__title {
+  max-width: 22ch;
+  margin-inline: auto;
+}
+
+.hero--offres-catalogue.hero--formations-dark .hero__lead {
+  max-width: 38ch;
+  margin-inline: auto;
+}
+
+.offres-breadcrumb {
+  padding: var(--space-3) 0;
+  background: var(--color-cream);
+  font-size: 0.875rem;
+  color: var(--color-gray-500);
+}
+
+.offres-breadcrumb .container {
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.offres-breadcrumb a {
+  color: var(--color-gray-500);
+  text-decoration: none;
+}
+
+.offres-breadcrumb a:hover {
+  color: var(--color-blue);
+  text-decoration: underline;
+}
+
+/* Cartes catalogue : pastilles type maquette */
+.card__badge {
+  display: inline-block;
+  padding: 0.25rem 0.65rem;
+  font-size: 0.75rem;
+  font-weight: var(--font-weight-medium);
+  color: var(--color-gray-700);
+  background: var(--color-gray-200);
+  border-radius: 999px;
+  margin-bottom: var(--space-2);
+}
+
+.page--offres-catalogue .card--formation .card__title {
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-bold);
+}
+
 /* ========== HERO B MANUELLE (bleu classique) ========== */
 .hero--offres-manuelle {
   position: relative;
@@ -401,20 +464,6 @@
   margin-bottom: var(--space-4);
 }
 
-/* Centrage des cartes prix — page Permis B manuelle */
-.page--offres-manuelle .price-cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-4);
-  width: 100%;
-}
-
-.page--offres-manuelle .price-cards .price-card {
-  flex: 0 0 14rem;
-  min-width: 14rem;
-}
-
 .page--offres-auto .offre-points,
 .page--offres-evaluation .offre-eval-block,
 .page--offres-aac .offre-steps,
@@ -467,11 +516,56 @@
 .page--offres-catalogue .card--formation {
   border-top: 3px solid var(--color-blue);
   transition: transform 0.2s, box-shadow 0.2s;
+  min-height: 11rem;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3) var(--space-4);
+  box-sizing: border-box;
+  overflow: visible;
 }
 
 .page--offres-catalogue .card--formation:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(13, 71, 161, 0.12);
+}
+
+.page--offres-catalogue .formations__grid {
+  align-items: stretch;
+  max-width: 64rem;
+  margin-inline: auto;
+}
+
+.page--offres-catalogue .card--formation .card__badge {
+  align-self: center;
+}
+
+.page--offres-catalogue .card--formation .card__icon {
+  align-self: center;
+  margin-bottom: 0;
+}
+
+.page--offres-catalogue .card--formation .card__title {
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.page--offres-catalogue .card--formation .card__text {
+  text-align: center;
+  max-width: 30ch;
+  margin: 0 auto;
+  flex-grow: 0;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.page--offres-catalogue .card--formation .card__link {
+  align-self: center;
+  width: auto;
+  min-width: 11rem;
+  margin-top: 0;
 }
 
 .card__icon {

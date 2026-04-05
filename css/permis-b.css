@@ -23,32 +23,48 @@
   max-width: 50ch;
 }
 
-/* ----- Grille de cartes prix ----- */
+/* ----- Grille de cartes prix (centrée, colonnes un peu plus larges) ----- */
 .price-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
   gap: var(--space-4);
+  width: 100%;
+  max-width: 58rem;
+  margin-inline: auto;
   list-style: none;
-  margin: 0;
+  margin-block: 0;
   padding: 0;
+  align-items: start;
+  justify-items: stretch;
 }
 
 .price-cards--single {
-  max-width: 20rem;
+  max-width: 22rem;
+  grid-template-columns: 1fr;
 }
 
-/* ----- Carte prix (alignée sur .card existant) ----- */
+/* ----- Carte prix — carré, contenu centré, espacement aéré ----- */
+.price-cards > li {
+  min-width: 0;
+}
+
 .price-card {
   background-color: var(--color-white);
   border: var(--card-border);
   border-radius: var(--card-radius);
   box-shadow: var(--card-shadow);
-  padding: var(--space-4);
+  padding: var(--space-3) var(--space-4);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
   text-align: center;
-  min-height: 11rem;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 10.25rem;
+  height: 100%;
+  overflow: visible;
   transition: box-shadow 0.2s, border-color 0.2s;
 }
 
@@ -61,21 +77,53 @@
   background-color: var(--color-white);
 }
 
+.price-card__meta {
+  font-size: 0.6875rem;
+  font-weight: var(--font-weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-gray-500);
+  margin: 0;
+  text-align: center;
+  line-height: 1.3;
+}
+
 .price-card__label {
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   font-weight: var(--font-weight-semibold);
   color: var(--color-gray-900);
-  margin-bottom: var(--space-2);
+  margin: 0;
+  text-align: center;
+  line-height: 1.3;
 }
 
 .price-card__price {
-  font-size: 1.75rem;
+  font-size: clamp(1.4rem, 4vw, 1.95rem);
   font-weight: var(--font-weight-bold);
   color: var(--color-blue);
-  margin-bottom: var(--space-4);
-  flex-grow: 1;
+  margin: 0;
+  flex-grow: 0;
   display: flex;
   align-items: center;
+  justify-content: center;
+  line-height: 1.1;
+}
+
+.price-card--repassage .price-card__info {
+  line-height: 1.45;
+}
+
+.price-card--featured {
+  border: 2px solid var(--color-blue);
+  box-shadow: 0 6px 20px rgba(13, 71, 161, 0.12);
+}
+
+.price-card__info {
+  font-size: 0.8125rem;
+  color: var(--color-gray-500);
+  line-height: 1.45;
+  margin: 0;
+  flex-shrink: 0;
 }
 
 .price-card__cta {
@@ -84,17 +132,8 @@
 }
 
 @media (min-width: 48rem) {
-  .price-cards {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .price-cards--single {
-    max-width: 20rem;
-    grid-template-columns: 1fr;
-  }
-
   .price-card__price {
-    font-size: 2rem;
+    font-size: clamp(1.55rem, 2.5vw, 2.05rem);
   }
 }
 
