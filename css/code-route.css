@@ -63,7 +63,14 @@
 .hero__code-candidat-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #00695C 0%, #00897B 50%, #26A69A 100%);
+  background: linear-gradient(
+    152deg,
+    #0a0f2e 0%,
+    #1a237e 28%,
+    #283593 54%,
+    #3949ab 78%,
+    #5c6bc0 100%
+  );
   z-index: 0;
 }
 
@@ -71,14 +78,24 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  background:
+    radial-gradient(ellipse at 28% 0%, rgba(197, 162, 103, 0.2) 0%, transparent 38%),
+    radial-gradient(ellipse at 90% 40%, rgba(121, 134, 203, 0.2) 0%, transparent 46%),
+    radial-gradient(ellipse at 10% 100%, rgba(255, 255, 255, 0.06) 0%, transparent 42%);
   pointer-events: none;
 }
 
 .hero__code-stage-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #6A1B9A 0%, #7B1FA2 50%, #9C27B0 100%);
+  background: linear-gradient(
+    152deg,
+    #2e1065 0%,
+    #5b21b6 32%,
+    #7c3aed 58%,
+    #a21caf 84%,
+    #c026d3 100%
+  );
   z-index: 0;
 }
 
@@ -86,7 +103,10 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 30% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 45%);
+  background:
+    radial-gradient(ellipse at 35% 0%, rgba(251, 191, 36, 0.15) 0%, transparent 36%),
+    radial-gradient(ellipse at 100% 65%, rgba(244, 114, 182, 0.14) 0%, transparent 48%),
+    radial-gradient(ellipse at 0% 50%, rgba(255, 255, 255, 0.07) 0%, transparent 45%);
   pointer-events: none;
 }
 

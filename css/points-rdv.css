@@ -16,7 +16,14 @@
 .hero__points-rdv-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 50%, #43A047 100%);
+  background: linear-gradient(
+    152deg,
+    #0c1929 0%,
+    #134e4a 30%,
+    #0f766e 58%,
+    #047857 82%,
+    #166534 100%
+  );
   z-index: 0;
 }
 
@@ -24,7 +31,10 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  background:
+    radial-gradient(ellipse at 50% 0%, rgba(197, 162, 103, 0.2) 0%, transparent 38%),
+    radial-gradient(ellipse at 100% 55%, rgba(45, 212, 191, 0.12) 0%, transparent 46%),
+    radial-gradient(ellipse at 0% 80%, rgba(255, 255, 255, 0.08) 0%, transparent 44%);
   pointer-events: none;
 }
 

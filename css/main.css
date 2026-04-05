@@ -552,6 +552,92 @@ ul {
   }
 }
 
+/* ----- Heroes « hub » : accueil, repassage examen (page principale), permis accéléré (page principale) — bandeau visuellement aligné (gap, typo compacte, padding serré) ----- */
+.hero.hero--home,
+.hero.hero--repassage.hero--repassage-premium,
+.hero.hero--accelere.hero--accelere-premium {
+  min-height: 44vh;
+}
+
+@media (min-width: 48rem) {
+  .hero.hero--home,
+  .hero.hero--repassage.hero--repassage-premium,
+  .hero.hero--accelere.hero--accelere-premium {
+    min-height: 38vh;
+  }
+}
+
+.hero.hero--home .hero__content,
+.hero.hero--repassage.hero--repassage-premium .hero__content,
+.hero.hero--accelere.hero--accelere-premium .hero__content {
+  padding: var(--space-3) var(--container-padding) var(--space-6);
+  gap: var(--space-3);
+  justify-content: center;
+}
+
+.hero.hero--home .hero__eyebrow--gold,
+.hero.hero--repassage.hero--repassage-premium .hero__eyebrow--gold,
+.hero.hero--accelere.hero--accelere-premium .hero__eyebrow--gold {
+  margin-bottom: 0;
+  font-size: 0.625rem;
+  letter-spacing: 0.12em;
+}
+
+.hero.hero--home .hero__title,
+.hero.hero--repassage.hero--repassage-premium .hero__title,
+.hero.hero--accelere.hero--accelere-premium .hero__title {
+  margin: 0;
+  line-height: 1.18;
+  font-size: clamp(1.3rem, 3.8vw, 1.75rem);
+}
+
+.hero.hero--home .hero__title--dark,
+.hero.hero--repassage.hero--repassage-premium .hero__title--dark,
+.hero.hero--accelere.hero--accelere-premium .hero__title--dark {
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.15);
+  max-width: 26ch;
+  margin-inline: auto;
+}
+
+@media (min-width: 48rem) {
+  .hero.hero--home .hero__title,
+  .hero.hero--repassage.hero--repassage-premium .hero__title,
+  .hero.hero--accelere.hero--accelere-premium .hero__title {
+    font-size: clamp(1.45rem, 2.4vw, 1.9rem);
+  }
+}
+
+.hero.hero--home .hero__lead--dark,
+.hero.hero--repassage.hero--repassage-premium .hero__lead--dark,
+.hero.hero--accelere.hero--accelere-premium .hero__lead--dark {
+  margin: 0;
+  max-width: 36ch;
+  margin-inline: auto;
+  font-size: clamp(0.9375rem, 1.35vw, 1.0625rem);
+  line-height: 1.45;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+}
+
+.hero.hero--home .hero__actions,
+.hero.hero--repassage.hero--repassage-premium .hero__actions,
+.hero.hero--accelere.hero--accelere-premium .hero__actions {
+  margin-top: 0;
+  gap: var(--space-2);
+  max-width: 19.5rem;
+}
+
+.hero.hero--home .hero__actions .btn--gold,
+.hero.hero--home .hero__actions .btn--outline-light,
+.hero.hero--repassage.hero--repassage-premium .hero__actions .btn--gold,
+.hero.hero--repassage.hero--repassage-premium .hero__actions .btn--outline-light,
+.hero.hero--accelere.hero--accelere-premium .hero__actions .btn--gold,
+.hero.hero--accelere.hero--accelere-premium .hero__actions .btn--outline-light {
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
+  font-size: 0.9375rem;
+}
+
 /* ----- Stats (chiffres / preuves) ----- */
 .stats {
   padding: var(--space-6) 0;

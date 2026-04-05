@@ -3,10 +3,9 @@
  * (Navbar identique aux autres pages : styles globaux dans main.css)
  */
 
-/* ----- Hero accueil (vert forêt + or, maquette Paris 10) ----- */
+/* ----- Hero accueil (fond = ancien permis accéléré premium : bleu nuit / marque + or) — hauteur / typo : main.css (.hero.hero--home hub) ----- */
 .hero--home {
   position: relative;
-  min-height: 58vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,14 +16,16 @@
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: linear-gradient(145deg, var(--color-forest) 0%, #243d30 45%, #1a2e24 100%);
+  background: linear-gradient(152deg, #051a38 0%, var(--color-blue-dark) 35%, var(--color-blue) 68%, #1a5fb8 100%);
 }
 
 .hero__home-bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 50% 0%, rgba(197, 162, 103, 0.14) 0%, transparent 50%);
+  background:
+    radial-gradient(ellipse at 35% 0%, rgba(197, 162, 103, 0.14) 0%, transparent 38%),
+    radial-gradient(ellipse at 100% 60%, rgba(255, 255, 255, 0.06) 0%, transparent 45%);
   pointer-events: none;
 }
 
@@ -35,17 +36,6 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-}
-
-.hero--home .hero__title--dark {
-  max-width: 20ch;
-  margin-inline: auto;
-  text-shadow: 0 2px 20px rgba(0, 0, 0, 0.25);
-}
-
-.hero--home .hero__lead--dark {
-  max-width: 40ch;
-  margin-inline: auto;
 }
 
 .hero--home .hero__lead--dark strong {

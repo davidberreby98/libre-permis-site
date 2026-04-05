@@ -18,7 +18,14 @@
 .hero__accelere-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(145deg, var(--color-blue-dark) 0%, #0d4a8f 42%, var(--color-blue) 78%, #1e6bc7 100%);
+  background: linear-gradient(
+    152deg,
+    #14080a 0%,
+    #3f0f14 22%,
+    #7c2d12 46%,
+    #b45309 72%,
+    #c2410c 100%
+  );
   z-index: 0;
 }
 
@@ -27,7 +34,10 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 75% 15%, rgba(255, 255, 255, 0.12) 0%, transparent 48%);
+  background:
+    radial-gradient(ellipse at 30% 0%, rgba(197, 162, 103, 0.26) 0%, transparent 36%),
+    radial-gradient(ellipse at 100% 40%, rgba(251, 191, 36, 0.12) 0%, transparent 46%),
+    radial-gradient(ellipse at 0% 95%, rgba(255, 237, 213, 0.08) 0%, transparent 42%);
   pointer-events: none;
 }
 
@@ -304,10 +314,9 @@
   min-width: 12rem;
 }
 
-/* ----- Hero permis accéléré « premium » (page principale) ----- */
+/* ----- Hero permis accéléré « premium » (page principale) — chaleur / dynamisme : bordeaux → brique → ambre (hors bleus des autres hubs) ; typo : main.css hub ----- */
 .hero--accelere-premium {
   position: relative;
-  min-height: 42vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -317,7 +326,14 @@
 .hero__accelere-premium-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(152deg, #051a38 0%, var(--color-blue-dark) 35%, var(--color-blue) 68%, #1a5fb8 100%);
+  background: linear-gradient(
+    152deg,
+    #14080a 0%,
+    #3f0f14 22%,
+    #7c2d12 46%,
+    #b45309 72%,
+    #c2410c 100%
+  );
   z-index: 0;
 }
 
@@ -326,8 +342,9 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse at 35% 0%, rgba(197, 162, 103, 0.14) 0%, transparent 38%),
-    radial-gradient(ellipse at 100% 60%, rgba(255, 255, 255, 0.06) 0%, transparent 45%);
+    radial-gradient(ellipse at 30% 0%, rgba(197, 162, 103, 0.26) 0%, transparent 36%),
+    radial-gradient(ellipse at 100% 40%, rgba(251, 191, 36, 0.12) 0%, transparent 46%),
+    radial-gradient(ellipse at 0% 95%, rgba(255, 237, 213, 0.08) 0%, transparent 42%);
   pointer-events: none;
 }
 
@@ -335,24 +352,6 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: var(--space-5) var(--container-padding) var(--space-6);
-}
-
-@media (min-width: 48rem) {
-  .hero--accelere-premium {
-    min-height: 38vh;
-  }
-}
-
-.hero--accelere-premium .hero__title--dark {
-  text-shadow: none;
-  max-width: 22ch;
-  margin-inline: auto;
-}
-
-.hero--accelere-premium .hero__lead--dark {
-  max-width: 38ch;
-  margin-inline: auto;
 }
 
 /* ----- Étapes parcours accéléré ----- */

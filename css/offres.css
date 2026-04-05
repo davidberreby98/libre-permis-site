@@ -3,68 +3,77 @@
  * Design différencié par thème : catalogue, B manuelle, B auto, évaluation, AAC, CS, passerelle
  */
 
-/* ========== HERO CATALOGUE (offres.html) ========== */
-.hero--offres-catalogue {
+/* ========== HERO CATALOGUE (offres.html) — même structure que repassage premium, fond bleu nuit / marque ========== */
+.hero--offres-catalogue-premium {
   position: relative;
-  min-height: 50vh;
+  min-height: 42vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
 
-.hero__offres-catalogue-bg {
+/* Catalogue : profondeur ardoise / indigo — toutes les formules, même palette premium accentuée */
+.hero__offres-catalogue-premium-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #0D47A1 0%, #1B5E20 100%);
+  background: linear-gradient(
+    152deg,
+    #0f0f1a 0%,
+    #1e1b4b 26%,
+    #312e81 52%,
+    #1e3a8a 78%,
+    #172554 100%
+  );
   z-index: 0;
 }
 
-.hero__offres-catalogue-bg::after {
+.hero__offres-catalogue-premium-bg::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  background:
+    radial-gradient(ellipse at 40% 0%, rgba(197, 162, 103, 0.24) 0%, transparent 36%),
+    radial-gradient(ellipse at 95% 55%, rgba(129, 140, 248, 0.14) 0%, transparent 44%),
+    radial-gradient(ellipse at 5% 90%, rgba(255, 255, 255, 0.05) 0%, transparent 40%);
   pointer-events: none;
 }
 
-.hero--offres-catalogue .hero__content {
+.hero--offres-catalogue-premium .hero__content {
   position: relative;
   z-index: 2;
   text-align: center;
-  padding: var(--space-8) var(--container-padding);
+  padding: var(--space-5) var(--container-padding) var(--space-6);
 }
 
-.hero--offres-catalogue .hero__title {
+.hero--offres-catalogue-premium .hero__content--center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero--offres-catalogue-premium .hero__title--dark {
   color: var(--color-white);
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.2);
+  max-width: 28ch;
+  margin-inline: auto;
 }
 
-.hero--offres-catalogue .hero__lead {
+.hero--offres-catalogue-premium .hero__lead--dark {
   color: rgba(255, 255, 255, 0.92);
-}
-
-/* Variante sombre type maquette « Nos formations » */
-.hero--offres-catalogue.hero--formations-dark .hero__offres-catalogue-bg {
-  background: #0a0a0a;
-}
-
-.hero--offres-catalogue.hero--formations-dark .hero__offres-catalogue-bg::after {
-  background: radial-gradient(ellipse at 50% 0%, rgba(197, 162, 103, 0.1) 0%, transparent 45%);
-}
-
-.hero--offres-catalogue.hero--formations-dark .hero__content {
-  text-align: center;
-}
-
-.hero--offres-catalogue.hero--formations-dark .hero__title {
-  max-width: 22ch;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
+  max-width: 40ch;
   margin-inline: auto;
 }
 
-.hero--offres-catalogue.hero--formations-dark .hero__lead {
-  max-width: 38ch;
-  margin-inline: auto;
+@media (min-width: 48rem) {
+  .hero--offres-catalogue-premium {
+    min-height: 36vh;
+  }
+
+  .hero--offres-catalogue-premium .hero__title--dark {
+    font-size: var(--font-size-display);
+  }
 }
 
 .offres-breadcrumb {
@@ -308,7 +317,7 @@
   color: rgba(255, 255, 255, 0.92);
 }
 
-/* ========== HERO CONDUITE SUPERVISÉE (vert doux, sérénité) ========== */
+/* ========== HERO CONDUITE SUPERVISÉE (mauve-ardoise → taupe : sérénité adulte, sans bleu→vert type passerelle) ========== */
 .hero--offres-cs {
   position: relative;
   min-height: 50vh;
@@ -321,7 +330,14 @@
 .hero__offres-cs-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, #2E7D32 0%, #43A047 60%, #66BB6A 100%);
+  background: linear-gradient(
+    152deg,
+    #1a121f 0%,
+    #2d2435 26%,
+    #443548 50%,
+    #5c4a5a 74%,
+    #6d5c52 100%
+  );
   z-index: 0;
 }
 
@@ -329,7 +345,10 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(ellipse at 70% 30%, rgba(255, 255, 255, 0.12) 0%, transparent 50%);
+  background:
+    radial-gradient(ellipse at 42% 0%, rgba(197, 162, 103, 0.2) 0%, transparent 38%),
+    radial-gradient(ellipse at 100% 55%, rgba(196, 181, 253, 0.1) 0%, transparent 44%),
+    radial-gradient(ellipse at 8% 90%, rgba(214, 188, 175, 0.1) 0%, transparent 46%);
   pointer-events: none;
 }
 
@@ -462,6 +481,14 @@
 .page--offres-passerelle .price-cards {
   margin-top: var(--space-5);
   margin-bottom: var(--space-4);
+}
+
+/* Permis B boîte auto : 4 tarifs sur une seule ligne (évite 2×2 imposé par permis-b.css entre 48–64rem) */
+@media (min-width: 48rem) {
+  .page--offres-auto .price-cards {
+    max-width: 72rem;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 .page--offres-auto .offre-points,
