@@ -226,7 +226,8 @@
   grid-template-columns: repeat(auto-fit, minmax(9.25rem, 1fr));
   justify-content: center;
   gap: var(--space-3);
-  margin-bottom: var(--space-5);
+  /* Espace sous les cartes géré par .tarifs-global-note (évite trou trop grand / bouton collé) */
+  margin-bottom: 0;
   max-width: 34rem;
   margin-inline: auto;
 }

@@ -233,3 +233,29 @@
   margin: 0;
   grid-column: 2;
 }
+
+/* ----- Carte Google Maps ----- */
+.contact-map {
+  padding: var(--space-8) 0;
+}
+
+.contact-map__frame-wrapper {
+  border: var(--card-border);
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+  background: var(--color-white);
+}
+
+.contact-map__frame {
+  display: block;
+  width: 100%;
+  height: 25rem;
+  border: 0;
+}
+
+@media (max-width: 47.9375rem) {
+  .contact-map__frame {
+    height: 20rem;
+  }
+}

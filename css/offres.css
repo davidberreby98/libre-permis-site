@@ -480,7 +480,8 @@
 .page--offres-aac .price-cards,
 .page--offres-passerelle .price-cards {
   margin-top: var(--space-5);
-  margin-bottom: var(--space-4);
+  /* La note TTC (.tarifs-global-note) suit la grille : évite la double marge en flex */
+  margin-bottom: 0;
 }
 
 /* Permis B boîte auto : 4 tarifs sur une seule ligne (évite 2×2 imposé par permis-b.css entre 48–64rem) */

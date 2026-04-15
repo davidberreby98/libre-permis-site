@@ -12,6 +12,37 @@
   var phoneIcon =
     '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>';
 
+  function initTarifsNote() {
+    var noteText = "Tous les tarifs sont TTC et incluent frais de gestion, accès code en ligne 3 mois, leçons de conduite et accompagnement examen (selon formule). Évaluation préalable : 65 €.";
+    var grids = document.querySelectorAll(".price-cards");
+    grids.forEach(function (grid) {
+      if (!grid) return;
+      if (grid.closest(".repassage-formules")) return;
+      if (grid.nextElementSibling && (grid.nextElementSibling.classList.contains("tarifs-global-note") || grid.nextElementSibling.classList.contains("repassage-price-note"))) return;
+      var note = document.createElement("p");
+      note.className = "tarifs-global-note";
+      note.textContent = noteText;
+      grid.insertAdjacentElement("afterend", note);
+    });
+  }
+
+  function initFooterContact() {
+    var footerInner = document.querySelector(".footer__inner");
+    if (!footerInner || footerInner.querySelector(".footer__contact")) return;
+    var block = document.createElement("div");
+    block.className = "footer__contact";
+    block.innerHTML =
+      "<p><strong>Téléphone :</strong> 06 95 82 93 75 / 01 86 04 91 37</p>" +
+      "<p><strong>Adresse :</strong> 91 rue de Maubeuge, 75010 Paris</p>" +
+      "<p><strong>Horaires agence :</strong> Lun–Jeu 10h–13h / 14h–19h · Ven–Sam 10h–14h</p>";
+    var legal = footerInner.querySelector(".footer__legal");
+    if (legal) {
+      footerInner.insertBefore(block, legal);
+    } else {
+      footerInner.appendChild(block);
+    }
+  }
+
   function initHeaderCallback() {
     var inner = document.querySelector(".header__inner");
     if (!inner || inner.querySelector(".header__callback")) return;
@@ -40,6 +71,8 @@
     document.body.classList.add("has-sticky-cta");
   }
 
+  initTarifsNote();
+  initFooterContact();
   initHeaderCallback();
   initStickyCta();
 

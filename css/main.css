@@ -638,49 +638,6 @@ ul {
   font-size: 0.9375rem;
 }
 
-/* ----- Stats (chiffres / preuves) ----- */
-.stats {
-  padding: var(--space-6) 0;
-}
-
-.stats__grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-4);
-}
-
-.stats__item {
-  text-align: center;
-  padding: var(--space-3);
-  background-color: var(--color-white);
-  border-radius: var(--card-radius);
-  border: var(--card-border);
-  box-shadow: var(--card-shadow);
-}
-
-.stats__value {
-  display: block;
-  font-size: 1.75rem;
-  font-weight: var(--font-weight-bold);
-  color: var(--color-blue);
-  margin-bottom: var(--space-1);
-}
-
-.stats__label {
-  font-size: 0.875rem;
-  color: var(--color-gray-500);
-}
-
-@media (min-width: 48rem) {
-  .stats__grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .stats__value {
-    font-size: 2rem;
-  }
-}
-
 /* ----- Formations (cartes) ----- */
 .formations {
   padding: var(--space-8) 0;
@@ -831,42 +788,6 @@ ul {
   margin: 0;
 }
 
-/* ----- Témoignages ----- */
-.temoignages {
-  padding: var(--space-8) 0;
-}
-
-.temoignages__grid {
-  display: grid;
-  gap: var(--space-4);
-}
-
-@media (min-width: 48rem) {
-  .temoignages__grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
-.card--temoignage {
-  border-left: 4px solid var(--color-green);
-}
-
-.temoignage__quote {
-  margin: 0 0 var(--space-3);
-  font-style: italic;
-  color: var(--color-gray-900);
-}
-
-.temoignage__quote p {
-  margin: 0;
-}
-
-.temoignage__cite {
-  font-size: 0.875rem;
-  color: var(--color-gray-500);
-  font-style: normal;
-}
-
 /* ----- Points de RDV (aperçu) ----- */
 .points-rdv {
   padding: var(--space-8) 0;
@@ -967,6 +888,17 @@ ul {
   margin-bottom: var(--space-4);
 }
 
+.footer__contact {
+  margin: 0 0 var(--space-4);
+  display: grid;
+  gap: var(--space-1);
+}
+
+.footer__contact p {
+  margin: 0;
+  color: var(--color-gray-500);
+}
+
 .footer__list a {
   color: var(--color-gray-500);
 }
@@ -979,6 +911,18 @@ ul {
 .footer__legal {
   margin: 0;
   color: var(--color-gray-500);
+}
+
+.tarifs-global-note {
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-6);
+  margin-inline: auto;
+  max-width: 62ch;
+  padding-block: var(--space-1);
+  font-size: 0.9375rem;
+  line-height: 1.45;
+  color: var(--color-gray-500);
+  text-align: center;
 }
 
 /* ----- Rappel header (injecté par main.js) ----- */
