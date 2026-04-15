@@ -252,7 +252,6 @@ ul {
   width: auto;
   object-fit: contain;
   object-position: center;
-  vertical-align: middle;
 }
 
 .header__burger {
@@ -454,6 +453,34 @@ ul {
 }
 
 @media (max-width: 63.9375rem) {
+  .header__inner {
+    padding-left: var(--container-padding);
+    height: 4.5rem;
+    min-height: 4.5rem;
+    max-height: 4.5rem;
+    gap: var(--space-2);
+  }
+
+  .header__logo {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    height: 3rem;
+  }
+
+  .header__logo-img {
+    height: 7rem;
+  }
+
+  .header__callback {
+    display: none;
+  }
+
+  .nav {
+    top: 4.5rem;
+  }
+
   .nav__item--dropdown > .nav__link::after {
     transform: rotate(0deg);
     transition: transform 0.2s;
@@ -897,6 +924,7 @@ ul {
 .footer__contact p {
   margin: 0;
   color: var(--color-gray-500);
+  line-height: 1.5;
 }
 
 .footer__list a {
@@ -923,6 +951,15 @@ ul {
   line-height: 1.45;
   color: var(--color-gray-500);
   text-align: center;
+}
+
+@media (max-width: 47.9375rem) {
+  .tarifs-global-note {
+    margin-top: var(--space-4);
+    margin-bottom: var(--space-5);
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
 }
 
 /* ----- Rappel header (injecté par main.js) ----- */
