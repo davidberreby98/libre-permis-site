@@ -458,7 +458,8 @@ ul {
     height: 4.5rem;
     min-height: 4.5rem;
     max-height: 4.5rem;
-    gap: var(--space-2);
+    gap: var(--space-3);
+    align-items: center;
   }
 
   .header__logo {
@@ -467,17 +468,51 @@ ul {
     left: auto;
     transform: none;
     height: 3rem;
+    margin-right: auto;
+    order: 1;
   }
 
   .header__logo-img {
     height: 7rem;
   }
 
+  /* Mobile : logo à gauche, puis CTA, puis burger à droite */
   .header__callback {
-    display: none;
+    order: 2;
+    display: inline-flex;
+    padding: 0.4rem 0.65rem;
+    font-size: 0.75rem;
+    gap: 0.3rem;
+    flex-shrink: 0;
+  }
+
+  .header__callback svg {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+
+  .header__burger {
+    order: 3;
+    width: 2.875rem;
+    height: 2.875rem;
+    gap: 6px;
+    flex-shrink: 0;
+  }
+
+  .header__burger-bar {
+    height: 2.5px;
+  }
+
+  .header__burger[aria-expanded="true"] .header__burger-bar:nth-child(1) {
+    transform: translateY(8.5px) rotate(45deg);
+  }
+
+  .header__burger[aria-expanded="true"] .header__burger-bar:nth-child(3) {
+    transform: translateY(-8.5px) rotate(-45deg);
   }
 
   .nav {
+    order: 4;
     top: 4.5rem;
   }
 
