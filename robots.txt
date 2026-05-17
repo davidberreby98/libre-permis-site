@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /wp-admin/
+Disallow: /SEO/
+
+Sitemap: https://www.libre-permis.com/sitemap.xml

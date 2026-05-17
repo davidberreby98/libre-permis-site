@@ -1,0 +1,47 @@
+# Libre Permis — SEO technique (HTTPS, www, URLs propres)
+RewriteEngine On
+RewriteBase /
+
+# Forcer HTTPS
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Forcer www
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Page d'accueil
+RewriteRule ^$ index.html [L]
+
+# URLs SEO sans extension (pages principales)
+RewriteRule ^permis-accelere/?$ permis-accelere.html [L]
+RewriteRule ^repassage-examen-permis-b/?$ repassage-examen.html [L]
+RewriteRule ^permis-boite-automatique/?$ offres-permis-b-boite-automatique.html [L]
+RewriteRule ^financement-permis/?$ financements.html [L]
+RewriteRule ^code-de-la-route/?$ code-route.html [L]
+
+# Redirections anciennes URLs vers nouvelles canoniques
+Redirect 301 /repassage-examen.html https://www.libre-permis.com/repassage-examen-permis-b
+Redirect 301 /financements.html https://www.libre-permis.com/financement-permis
+Redirect 301 /code-route.html https://www.libre-permis.com/code-de-la-route
+Redirect 301 /offres-permis-b-boite-automatique.html https://www.libre-permis.com/permis-boite-automatique
+
+# URLs propres : fichier .html du même nom que le slug
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{DOCUMENT_ROOT}/$1.html -f
+RewriteRule ^([a-z0-9-]+)/?$ $1.html [L]
+
+# Page 404
+ErrorDocument 404 /404.html
+
+# Cache navigateur (assets statiques)
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+</IfModule>

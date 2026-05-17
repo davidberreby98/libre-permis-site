@@ -43,6 +43,40 @@
     }
   }
 
+  function initFooterParis10() {
+    var list = document.querySelector(".footer__list");
+    if (!list || list.querySelector('a[href*="auto-ecole-paris-10"]')) return;
+    var li = document.createElement("li");
+    var link = document.createElement("a");
+    link.href = "auto-ecole-paris-10.html";
+    link.textContent = "Auto-école Paris 10";
+    li.appendChild(link);
+    var first = list.firstElementChild;
+    if (first) list.insertBefore(li, first.nextElementSibling);
+    else list.appendChild(li);
+  }
+
+  function initDeptParis10Mention() {
+    if (document.body.classList.contains("page--auto-ecole-locale")) return;
+    if (
+      !document.body.classList.contains("page--permis-accelere") &&
+      !document.body.classList.contains("page--repassage-examen")
+    ) {
+      return;
+    }
+    var container =
+      document.querySelector(".region-links .container") ||
+      document.querySelector(".accelere-avantages .container");
+    if (!container || container.querySelector(".seo-paris10-link")) return;
+    var p = document.createElement("p");
+    p.className = "seo-paris10-link section-lead";
+    p.style.marginTop = "1.5rem";
+    p.style.textAlign = "center";
+    p.innerHTML =
+      'Siège : <a href="auto-ecole-paris-10.html"><strong>auto-école Paris 10</strong></a> — 91 rue de Maubeuge, Gare du Nord. <a href="permis-accelere.html">Formation permis accéléré Paris 10</a>.';
+    container.appendChild(p);
+  }
+
   function initHeaderCallback() {
     var inner = document.querySelector(".header__inner");
     if (!inner || inner.querySelector(".header__callback")) return;
@@ -73,6 +107,10 @@
 
   initTarifsNote();
   initFooterContact();
+  initFooterParis10();
+  initDeptParis10Mention();
+  initFooterParis10();
+  initDeptParis10Mention();
   initHeaderCallback();
   initStickyCta();
 
