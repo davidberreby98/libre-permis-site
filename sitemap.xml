@@ -29,4 +29,6 @@
   <url><loc>https://www.libre-permis.com/contact</loc><priority>0.6</priority></url>
   <url><loc>https://www.libre-permis.com/points-rdv</loc><priority>0.6</priority></url>
   <url><loc>https://www.libre-permis.com/offres</loc><priority>0.5</priority></url>
+  <url><loc>https://www.libre-permis.com/mentions-legales</loc><priority>0.3</priority></url>
+  <url><loc>https://www.libre-permis.com/politique-confidentialite</loc><priority>0.3</priority></url>
 </urlset>

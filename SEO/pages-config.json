@@ -221,6 +221,16 @@
       { "name": "Massy", "path": "/auto-ecole-massy" }
     ]
   },
+  "mentions-legales.html": {
+    "canonical": "/mentions-legales",
+    "title": "Mentions légales | Libre Permis",
+    "description": "Mentions légales du site Libre Permis — auto-école agréée Paris 10e, 91 rue de Maubeuge. SIRET, coordonnées et informations légales."
+  },
+  "politique-confidentialite.html": {
+    "canonical": "/politique-confidentialite",
+    "title": "Politique de confidentialité | Libre Permis",
+    "description": "Politique de confidentialité et protection des données personnelles — Libre Permis, auto-école Paris 10."
+  },
   "auto-ecole-villacoublay.html": {
     "canonical": "/auto-ecole-villacoublay",
     "title": "Permis B Villacoublay - Stage accéléré dès 690 euros | Libre Permis 78",

@@ -1028,6 +1028,50 @@ ul {
   color: var(--color-gray-500);
 }
 
+.footer__legal-links {
+  margin: 0.5rem 0 0;
+  font-size: 0.875rem;
+}
+
+.footer__legal-links a {
+  color: var(--color-gray-500);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.footer__legal-links a:hover {
+  color: var(--color-navy);
+}
+
+.legal-content {
+  max-width: 42rem;
+  margin: 0 auto;
+}
+
+.legal-content h2 {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+}
+
+.legal-content h2:first-child {
+  margin-top: 0;
+}
+
+.legal-content p,
+.legal-content ul {
+  margin: 0.75rem 0 0;
+  line-height: 1.6;
+  color: var(--color-gray-700);
+}
+
+.legal-content ul {
+  padding-left: 1.25rem;
+}
+
+.legal-content a {
+  color: var(--color-navy);
+}
+
 .tarifs-global-note {
   margin-top: var(--space-5);
   margin-bottom: var(--space-6);

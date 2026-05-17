@@ -8,10 +8,15 @@ import path from "path";
 import { fileURLToPath } from "url";
 import {
   SITE,
+  LOGO_URL,
   drivingSchoolSchema,
   faqSchemas,
   breadcrumbSchema,
 } from "../seo/schemas.js";
+
+const FAVICON_BLOCK = `  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/logo.svg">
+`;
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
@@ -37,7 +42,7 @@ function buildSeoBlock(page) {
     canonicalPath === "/" ? `${SITE}/` : `${SITE}${canonicalPath}`;
   const title = page.title || DEFAULT.title;
   const description = page.description || DEFAULT.description;
-  const ogImage = `${SITE}/images/logo.svg`;
+  const ogImage = LOGO_URL;
 
   const scripts = [];
   scripts.push({
@@ -72,7 +77,7 @@ function buildSeoBlock(page) {
     ? '  <meta name="robots" content="noindex, nofollow">\n'
     : "";
 
-  return `  <link rel="canonical" href="${canonicalUrl}">
+  return `${FAVICON_BLOCK}  <link rel="canonical" href="${canonicalUrl}">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Libre Permis">
   <meta property="og:title" content="${escapeAttr(title)}">
@@ -94,6 +99,8 @@ function escapeAttr(s) {
 
 function stripOldSeo(head) {
   let h = head;
+  h = h.replace(/\s*<link rel="icon"[^>]*>/gi, "");
+  h = h.replace(/\s*<link rel="apple-touch-icon"[^>]*>/gi, "");
   h = h.replace(/\s*<link rel="canonical"[^>]*>/gi, "");
   h = h.replace(/\s*<meta property="og:[^"]+"[^>]*>/gi, "");
   h = h.replace(/\s*<meta name="twitter:[^"]+"[^>]*>/gi, "");

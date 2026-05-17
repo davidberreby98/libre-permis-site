@@ -1,5 +1,6 @@
 /** Schémas JSON-LD partagés — www.libre-permis.com */
 export const SITE = "https://www.libre-permis.com";
+export const LOGO_URL = `${SITE}/images/logo.svg`;
 
 export const drivingSchoolSchema = {
   "@context": "https://schema.org",
@@ -8,8 +9,8 @@ export const drivingSchoolSchema = {
   description:
     "Auto-école agréée Paris 10e, Gare du Nord. Formation permis B accéléré dès 690 euros. 11 centres d'examen IDF.",
   url: SITE,
-  logo: `${SITE}/images/logo.svg`,
-  image: `${SITE}/images/logo.svg`,
+  logo: LOGO_URL,
+  image: LOGO_URL,
   telephone: ["+33695829375", "+33186049137"],
   email: "contact@libre-permis.com",
   priceRange: "690 euros",

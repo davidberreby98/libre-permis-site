@@ -43,6 +43,16 @@
     }
   }
 
+  function initFooterLegal() {
+    var legal = document.querySelector(".footer__legal");
+    if (!legal || legal.querySelector(".footer__legal-links")) return;
+    var links = document.createElement("p");
+    links.className = "footer__legal-links";
+    links.innerHTML =
+      '<a href="mentions-legales.html">Mentions légales</a> · <a href="politique-confidentialite.html">Confidentialité</a>';
+    legal.appendChild(links);
+  }
+
   function initFooterParis10() {
     var list = document.querySelector(".footer__list");
     if (!list || list.querySelector('a[href*="auto-ecole-paris-10"]')) return;
@@ -109,8 +119,7 @@
   initFooterContact();
   initFooterParis10();
   initDeptParis10Mention();
-  initFooterParis10();
-  initDeptParis10Mention();
+  initFooterLegal();
   initHeaderCallback();
   initStickyCta();
 
